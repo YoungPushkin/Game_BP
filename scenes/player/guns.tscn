@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://v6yef2rbigde"]
+
+[ext_resource type="Texture2D" uid="uid://bwfv52846kvcm" path="res://assets/player/2 Guns/7_1.png" id="1_p0xlb"]
+[ext_resource type="Script" uid="uid://be5qjo5wsrx6l" path="res://scripts/player/guns.gd" id="2_gun"]
+
+[node name="gun" type="Node2D" unique_id=1351696854]
+script = ExtResource("2_gun")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=8234429]
+position = Vector2(5, -2)
+texture = ExtResource("1_p0xlb")
+offset = Vector2(-0.375, 0)
+
+[node name="muzzle" type="Marker2D" parent="." unique_id=1240332095]
+position = Vector2(10, -3)
+gizmo_extents = 13.5

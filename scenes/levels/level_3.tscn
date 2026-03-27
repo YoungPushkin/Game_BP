@@ -1,0 +1,1275 @@
+[gd_scene format=4 uid="uid://bd2o05e7v2ar"]
+
+[ext_resource type="Texture2D" uid="uid://bbm6arrnoqs0i" path="res://assets/tilesets/Tileset.png" id="1_cboog"]
+[ext_resource type="Texture2D" uid="uid://wb0j5mhgpmke" path="res://assets/backgrounds/fon.png" id="2_do6pa"]
+[ext_resource type="Texture2D" uid="uid://dju7d5gg58to4" path="res://assets/tilesets/material.png" id="2_xxym7"]
+[ext_resource type="Texture2D" uid="uid://ug5oehylikj" path="res://assets/player/1 Characters/1 Biker/Idle1.png" id="3_4xvr4"]
+[ext_resource type="Texture2D" uid="uid://dvbnasyvrlucb" path="res://assets/tilesets/closet.png" id="4_kajtr"]
+[ext_resource type="Texture2D" uid="uid://bbdavklyj4m5o" path="res://assets/props/Saw.png" id="5_i6iu3"]
+[ext_resource type="Texture2D" uid="uid://dpb65bi7t0sg1" path="res://assets/props/Chest.png" id="6_s3253"]
+[ext_resource type="Texture2D" uid="uid://dh0qo81t4213" path="res://assets/props/Hammer.png" id="7_vckcw"]
+[ext_resource type="Texture2D" uid="uid://dhcm8ju5k4ap2" path="res://assets/props/Entry.png" id="8_er8s6"]
+[ext_resource type="Texture2D" uid="uid://br0pncw7pn3no" path="res://assets/props/Screen2.png" id="9_lgnph"]
+[ext_resource type="Texture2D" uid="uid://crs5oulrs7i43" path="res://assets/enemies/woolf/Idle.png" id="10_rxay5"]
+[ext_resource type="Texture2D" uid="uid://bu75btng32ypv" path="res://assets/enemies/sky/Idle.png" id="11_c1ht5"]
+[ext_resource type="Texture2D" uid="uid://ctutwe5qei31g" path="res://assets/enemies/robot/Idle.png" id="12_8t0i3"]
+[ext_resource type="PackedScene" uid="uid://732kl618arca" path="res://scenes/traps/saw.tscn" id="13_ql2ws"]
+[ext_resource type="PackedScene" uid="uid://bqyd77t4kb8qx" path="res://scenes/environment/module_pickup.tscn" id="15_hkh11"]
+[ext_resource type="PackedScene" uid="uid://bikq0783p28ix" path="res://scenes/traps/hammer.tscn" id="17_77gte"]
+[ext_resource type="PackedScene" uid="uid://cchdhd0hrdxhv" path="res://scenes/environment/moduletable.tscn" id="19_6h1ff"]
+[ext_resource type="PackedScene" uid="uid://nqpmr88dindm" path="res://scenes/environment/door.tscn" id="21_pbygd"]
+[ext_resource type="PackedScene" uid="uid://ddu741leyb4dx" path="res://scenes/environment/terminal.tscn" id="23_7hlpv"]
+[ext_resource type="PackedScene" uid="uid://dclrjixhx1fev" path="res://scenes/enemies/robot.tscn" id="25_ly6fu"]
+[ext_resource type="PackedScene" uid="uid://c4a1yhhb4n7lp" path="res://scenes/enemies/sky.tscn" id="27_s3aki"]
+[ext_resource type="PackedScene" uid="uid://b6pqil8ll8fkb" path="res://scenes/enemies/wolf.tscn" id="29_d54mr"]
+[ext_resource type="PackedScene" uid="uid://cxch4pypkmyrs" path="res://scenes/player/player.tscn" id="31_1h0h6"]
+[ext_resource type="PackedScene" uid="uid://hj65x7dstlyj" path="res://scenes/environment/locker.tscn" id="33_flp5u"]
+[ext_resource type="PackedScene" uid="uid://jqn056t0ad2h" path="res://scenes/environment/ladder_area.tscn" id="35_hkh11"]
+[ext_resource type="Script" uid="uid://87p6ioupjuuw" path="res://scripts/levels/level_3.gd" id="37_level3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77gte"]
+texture = ExtResource("1_cboog")
+texture_region_size = Vector2i(32, 32)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15, -16, -15, 16, 16, 16, 16, -16)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 15, 16, 15, -16)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -3, -16, 16, 8, 16, 8, -3)
+5:5/0 = 0
+6:5/0 = 0
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+3:6/0 = 0
+3:6/3 = 3
+3:6/3/flip_h = true
+3:6/3/flip_v = true
+3:5/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+6:6/0 = 0
+4:5/0 = 0
+2:6/0 = 0
+0:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqktq"]
+texture = ExtResource("2_xxym7")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+7:1/0 = 0
+3:1/0 = 0
+1:5/0 = 0
+1:5/2 = 2
+1:5/2/flip_v = true
+3:5/0 = 0
+7:5/0 = 0
+3:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6h1ff"]
+texture = ExtResource("3_4xvr4")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wubtc"]
+texture = ExtResource("4_kajtr")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pbygd"]
+texture = ExtResource("5_i6iu3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cdd8p"]
+texture = ExtResource("6_s3253")
+texture_region_size = Vector2i(32, 32)
+7:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7hlpv"]
+texture = ExtResource("7_vckcw")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ajul3"]
+texture = ExtResource("8_er8s6")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ly6fu"]
+texture = ExtResource("9_lgnph")
+texture_region_size = Vector2i(32, 42)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wmaj8"]
+texture = ExtResource("10_rxay5")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3aki"]
+texture = ExtResource("11_c1ht5")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxmhn"]
+texture = ExtResource("12_8t0i3")
+texture_region_size = Vector2i(48, 48)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d54mr"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_77gte")
+sources/1 = SubResource("TileSetAtlasSource_cqktq")
+sources/2 = SubResource("TileSetAtlasSource_pbygd")
+sources/3 = SubResource("TileSetAtlasSource_cdd8p")
+sources/4 = SubResource("TileSetAtlasSource_7hlpv")
+sources/5 = SubResource("TileSetAtlasSource_ajul3")
+sources/6 = SubResource("TileSetAtlasSource_ly6fu")
+sources/7 = SubResource("TileSetAtlasSource_wmaj8")
+sources/8 = SubResource("TileSetAtlasSource_s3aki")
+sources/9 = SubResource("TileSetAtlasSource_nxmhn")
+sources/10 = SubResource("TileSetAtlasSource_6h1ff")
+sources/11 = SubResource("TileSetAtlasSource_wubtc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp06o"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0h6"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x18l"]
+size = Vector2(608, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_flp5u"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj2d7"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwh0x"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwn2u"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbgvm"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bamvr"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nlgl"]
+size = Vector2(384, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bd1j"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2hk4"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5348f"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcaf6"]
+size = Vector2(128, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk58r"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nw8j"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uiai"]
+size = Vector2(192, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihqdu"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll1et"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v455p"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkl0k"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5n58"]
+size = Vector2(128, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f20m1"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ht4lx"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pc33h"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eowsc"]
+size = Vector2(256, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8bld"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_251ql"]
+size = Vector2(192, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axcxq"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yau4t"]
+size = Vector2(480, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ect3"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjoap"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7cwn"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mme3o"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6ohc"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o06oo"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot57j"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s64wd"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hllga"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vm1pw"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi5ac"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_galua"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8n1r"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oik8o"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0o5t"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f26wl"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qec7y"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlypj"]
+size = Vector2(768, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abxbj"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fge8i"]
+size = Vector2(128, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4r6ki"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2haq"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw63w"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvgwa"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37cix"]
+size = Vector2(352, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0l3j"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjymf"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oc4vu"]
+size = Vector2(352, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1e0tr"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpmcr"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwt78"]
+size = Vector2(352, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv20b"]
+size = Vector2(64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vuoha"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wrru"]
+size = Vector2(448, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7y14"]
+size = Vector2(576, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnd42"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8os3j"]
+size = Vector2(1152, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlw7m"]
+size = Vector2(20, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2lqh"]
+size = Vector2(20, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8d2u"]
+size = Vector2(20, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlx6i"]
+size = Vector2(20, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sv3ox"]
+size = Vector2(20, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xt56g"]
+size = Vector2(22, 69)
+
+[node name="level3" type="Node2D" unique_id=1906097912]
+script = ExtResource("37_level3")
+metadata/schema_version = 4
+metadata/source_editor = "tiled"
+
+[node name="Fon" type="Sprite2D" parent="." unique_id=1753400238]
+position = Vector2(574.8625, 388.17325)
+scale = Vector2(0.7501791, 0.73434716)
+texture = ExtResource("2_do6pa")
+
+[node name="hammer" type="Node2D" parent="." unique_id=1723952504]
+
+[node name="hammer4" parent="hammer" unique_id=1493552031 instance=ExtResource("17_77gte")]
+position = Vector2(-960, 663)
+frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/active_frame_from = 0
+metadata/active_frame_to = 7
+metadata/anim_name = "hammer"
+metadata/collision_profile = "trap"
+metadata/cycle_speed = 1.0
+metadata/damage = 9999
+metadata/entity_type = "hammer_trap"
+metadata/frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+metadata/frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/hit_cooldown = 0.4
+metadata/spawn_kind = "trap"
+metadata/start_phase = 0.0
+
+[node name="hammer5" parent="hammer" unique_id=918616091 instance=ExtResource("17_77gte")]
+position = Vector2(-1043, 664)
+frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/active_frame_from = 0
+metadata/active_frame_to = 7
+metadata/anim_name = "hammer"
+metadata/collision_profile = "trap"
+metadata/cycle_speed = 1.0
+metadata/damage = 9999
+metadata/entity_type = "hammer_trap"
+metadata/frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+metadata/frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/hit_cooldown = 0.4
+metadata/spawn_kind = "trap"
+metadata/start_phase = 0.0
+
+[node name="hammer6" parent="hammer" unique_id=2067275137 instance=ExtResource("17_77gte")]
+position = Vector2(-1126, 664)
+frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/active_frame_from = 0
+metadata/active_frame_to = 7
+metadata/anim_name = "hammer"
+metadata/collision_profile = "trap"
+metadata/cycle_speed = 1.0
+metadata/damage = 9999
+metadata/entity_type = "hammer_trap"
+metadata/frame_y_offsets = "[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"
+metadata/frame_y_scales = "[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"
+metadata/hit_cooldown = 0.4
+metadata/spawn_kind = "trap"
+metadata/start_phase = 0.0
+
+[node name="world" type="TileMapLayer" parent="." unique_id=1457133963]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAQAAAABAAAAAAABAAQAAAACAAAAAAABAAQAAAADAAAAAAABAAQAAAAEAAAAAAABAAQAAAAFAAAAAAABAAQAAAAGAAAAAAABAAQAAAAHAAAAAAABAAQAAAAIAAAAAAABAAQAAAAJAAAAAAABAAQAAAAKAAAAAAABAAQAAAALAAAAAAABAAQAAAAMAAAAAAABAAQAAAANAAAAAAABAAQAAAAOAAAAAAABAAQAAAAPAAAAAAABAAQAAAAQAAAAAAABAAQAAAARAAAAAAABAAQAAAASAAAAAAABAAQAAAATAAAAAAABAAQAAAAUAAAAAAABAAQAAAAVAAAAAAABAAQAAAAWAAAAAAABAAQAAAAXAAAAAAABAAQAAAAYAAAAAAABAAQAAAAZAAAAAAABAAQAAAAaAAAAAAABAAQAAAAbAAAAAAABAAQAAAAcAAAAAAABAAQAAAAdAAAAAAABAAQAAAAeAAAAAAABAAQAAAAfAAAAAAABAAQAAAAgAAAAAAABAAQAAAAhAAAAAAABAAQAAAAiAAAAAAABAAQAAAAjAAAAAAACAAQAAAAAAAEAAAAAAAUAAAABAAEAAAAFAAUAAAACAAEAAAABAAYAAAADAAEAAAABAAYAAAAEAAEAAAABAAYAAAAFAAEAAAABAAYAAAAGAAEAAAABAAYAAAAHAAEAAAABAAYAAAAIAAEAAAABAAYAAAAJAAEAAAABAAYAAAAKAAEAAAABAAYAAAALAAEAAAABAAYAAAAMAAEAAAABAAYAAAANAAEAAAABAAYAAAAOAAEAAAABAAYAAAAPAAEAAAABAAYAAAAQAAEAAAABAAYAAAARAAEAAAABAAYAAAASAAEAAAABAAYAAAATAAEAAAABAAYAAAAUAAEAAAABAAYAAAAVAAEAAAABAAYAAAAWAAEAAAABAAYAAAAXAAEAAAABAAYAAAAYAAEAAAABAAYAAAAZAAEAAAABAAYAAAAaAAEAAAABAAYAAAAbAAEAAAABAAYAAAAcAAEAAAABAAYAAAAdAAEAAAABAAYAAAAeAAEAAAABAAYAAAAfAAEAAAABAAYAAAAgAAEAAAABAAYAAAAhAAEAAAABAAYAAAAiAAEAAAAGAAUAAAAjAAEAAAACAAUAAAAAAAIAAAAAAAUAAAABAAIAAAACAAUAAAACAAIAAAAAAAAAAAADAAIAAAABAAAAAAAEAAIAAAACAAAAAAAFAAIAAAADAAAAAAAGAAIAAAAEAAAAAAAHAAIAAAAFAAAAAAAIAAIAAAAGAAAAAAAJAAIAAAAHAAAAAAAKAAIAAAAAAAAAAAALAAIAAAABAAAAAAAMAAIAAAACAAAAAAANAAIAAAADAAAAAAAOAAIAAAAEAAAAAAAPAAIAAAAFAAAAAAAQAAIAAAAGAAAAAAARAAIAAAAHAAAAAAASAAIAAAAAAAAAAAATAAIAAAADAAYAAwAiAAIAAAAAAAUAAAAjAAIAAAACAAUAAAAAAAMAAAAAAAUAAAABAAMAAAACAAUAAAATAAMAAAADAAUAAAAbAAMAAQABAAEAAAAiAAMAAAAAAAUAAAAjAAMAAAACAAUAAAAAAAQAAAAAAAUAAAABAAQAAAACAAUAAAASAAQAAQABAAEAAAATAAQAAAADAAUAAAAVAAQAAAAEAAQAAAAWAAQAAAAFAAQAAAAXAAQAAAAFAAQAAAAYAAQAAAAFAAQAAAAZAAQAAAAFAAQAAAAaAAQAAAAFAAQAAAAbAAQAAAAFAAQAAAAcAAQAAAAFAAQAAAAdAAQAAAAFAAQAAAAeAAQAAAAFAAQAAAAfAAQAAAAFAAQAAAAgAAQAAAAGAAQAAAAiAAQAAAAAAAUAAAAjAAQAAAACAAUAAAAAAAUAAAAAAAUAAAABAAUAAAACAAUAAAANAAUAAAAAAAQAAAAOAAUAAAACAAQAAAAQAAUAAAAEAAQAAAARAAUAAAAFAAQAAAASAAUAAAAGAAQAAAATAAUAAAADAAUAAAAiAAUAAAAAAAUAAAAjAAUAAAACAAUAAAAAAAYAAAAAAAUAAAABAAYAAAACAAUAAAAJAAYAAAAAAAQAAAAKAAYAAAABAAQAAAALAAYAAAABAAQAAAAMAAYAAAABAAQAAAANAAYAAAAGAAYAAAAOAAYAAAACAAUAAAATAAYAAAADAAUAAAAiAAYAAAAAAAUAAAAjAAYAAAACAAUAAAAAAAcAAAAAAAUAAAABAAcAAAACAAUAAAAIAAcAAAAAAAQAAAAJAAcAAAAGAAYAAAAKAAcAAAABAAUAAAALAAcAAAABAAUAAAAMAAcAAAABAAUAAAANAAcAAAABAAUAAAAOAAcAAAACAAUAAAATAAcAAAADAAUAAAAUAAcAAAAEAAQAAAAVAAcAAAAFAAQAAAAWAAcAAAAGAAQAAAAaAAcAAAAEAAUAAAAiAAcAAAAAAAUAAAAjAAcAAAACAAUAAAAAAAgAAAAAAAUAAAABAAgAAAACAAUAAAAGAAgAAQAHAAEAAAAHAAgAAAAAAAQAAAAIAAgAAAAGAAYAAAAJAAgAAAABAAUAAAAKAAgAAAABAAUAAAALAAgAAAABAAUAAAAMAAgAAAABAAUAAAANAAgAAAABAAUAAAAOAAgAAAACAAUAAAATAAgAAAADAAUAAAAeAAgAAAAEAAQAAAAfAAgAAAAFAAQAAAAgAAgAAAAFAAQAAAAhAAgAAAAGAAQAAAAiAAgAAAAAAAUAAAAjAAgAAAACAAUAAAAAAAkAAAAAAAUAAAABAAkAAAACAAUAAAADAAkAAAAEAAQAAAAEAAkAAAAFAAQAAAAFAAkAAAAFAAQAAAAGAAkAAAAFAAQAAAAHAAkAAAABAAYAAAAIAAkAAAAGAAUAAAAJAAkAAAABAAUAAAAKAAkAAAABAAUAAAALAAkAAAABAAUAAAAMAAkAAAABAAUAAAANAAkAAAABAAUAAAAOAAkAAAACAAUAAAAPAAkAAAAEAAQAAAAQAAkAAAAFAAQAAAARAAkAAAAGAAQAAAATAAkAAAADAAUAAAAiAAkAAAAAAAUAAAAjAAkAAAACAAUAAAAAAAoAAAAAAAUAAAABAAoAAAACAAUAAAAIAAoAAAAAAAUAAAAJAAoAAAAFAAUAAAAKAAoAAAABAAYAAAALAAoAAAABAAYAAAAMAAoAAAAGAAUAAAANAAoAAAAFAAUAAAAOAAoAAAACAAYAAAATAAoAAAADAAYAAAAaAAoAAAAEAAQAAAAbAAoAAAAGAAQAAAAiAAoAAAAAAAUAAAAjAAoAAAACAAUAAAAAAAsAAAAAAAUAAAABAAsAAAACAAUAAAAIAAsAAAAAAAUAAAAJAAsAAAACAAUAAAAMAAsAAAAAAAUAAAANAAsAAAACAAUAAAAiAAsAAAAAAAUAAAAjAAsAAAACAAUAAAAAAAwAAAAAAAUAAAABAAwAAAACAAUAAAAIAAwAAAAAAAYAAAAJAAwAAAACAAYAAAAMAAwAAAAAAAUAAAANAAwAAAACAAUAAAAOAAwAAQADAAEAAAAVAAwAAQAHAAEAAAAWAAwAAAAAAAQAAAAXAAwAAAABAAQAAAAYAAwAAAACAAQAAAAhAAwAAQABAAEAAAAiAAwAAAAAAAUAAAAjAAwAAAACAAUAAAAAAA0AAAAAAAUAAAABAA0AAAACAAUAAAAMAA0AAAAAAAYAAAANAA0AAAACAAYAAAAOAA0AAAAEAAQAAAAPAA0AAAAFAAQAAAAQAA0AAAAFAAQAAAARAA0AAAAFAAQAAAASAA0AAAAFAAQAAAATAA0AAAAFAAQAAAAUAA0AAAAFAAQAAAAVAA0AAAAFAAQAAAAWAA0AAAAGAAYAAAAXAA0AAAAEAAYAAAAYAA0AAAAFAAYAAAAZAA0AAAABAAQAAAAaAA0AAAAFAAQAAAAbAA0AAAAFAAQAAAAcAA0AAAAFAAQAAAAdAA0AAAAFAAQAAAAeAA0AAAAFAAQAAAAfAA0AAAAFAAQAAAAgAA0AAAAFAAQAAAAhAA0AAAAGAAQAAAAiAA0AAAAAAAUAAAAjAA0AAAACAAUAAAAAAA4AAAAAAAUAAAABAA4AAAACAAUAAAAWAA4AAAAAAAYAAAAXAA4AAAABAAYAAAAYAA4AAAAGAAUAAAAZAA4AAAACAAUAAAAiAA4AAAAAAAUAAAAjAA4AAAACAAUAAAAAAA8AAAAAAAUAAAABAA8AAAACAAUAAAAYAA8AAAAAAAUAAAAZAA8AAAACAAUAAAAiAA8AAAAAAAUAAAAjAA8AAAACAAUAAAAAABAAAAAAAAUAAAABABAAAAAFAAYAAAACABAAAAABAAQAAAADABAAAAABAAQAAAAEABAAAAABAAQAAAAFABAAAAABAAQAAAAGABAAAAABAAQAAAAHABAAAAABAAQAAAAIABAAAAABAAQAAAAJABAAAAABAAQAAAAKABAAAAACAAQAAAAYABAAAAAAAAUAAAAZABAAAAACAAUAAAAiABAAAAAAAAUAAAAjABAAAAACAAUAAAAAABEAAAAAAAUAAAABABEAAAABAAUAAAACABEAAAABAAUAAAADABEAAAABAAUAAAAEABEAAAABAAUAAAAFABEAAAABAAUAAAAGABEAAAABAAUAAAAHABEAAAABAAUAAAAIABEAAAABAAUAAAAJABEAAAABAAUAAAAKABEAAAACAAUAAAAYABEAAAAAAAYAAAAZABEAAAACAAYAAAAiABEAAAAAAAUAAAAjABEAAAACAAUAAAAAABIAAAAAAAYAAAABABIAAAABAAYAAAACABIAAAABAAYAAAADABIAAAABAAYAAAAEABIAAAABAAYAAAAFABIAAAABAAYAAAAGABIAAAABAAYAAAAHABIAAAABAAYAAAAIABIAAAABAAYAAAAJABIAAAABAAYAAAAKABIAAAACAAYAAAAiABIAAAAAAAYAAAAjABIAAAACAAYAAAAUABQAAAAAAAQAAAAVABQAAAABAAQAAAAWABQAAAACAAQAAAAAABUAAAAAAAQAAAABABUAAAABAAQAAAACABUAAAABAAQAAAADABUAAAABAAQAAAAEABUAAAABAAQAAAAFABUAAAABAAQAAAAGABUAAAABAAQAAAAHABUAAAABAAQAAAAIABUAAAABAAQAAAAJABUAAAABAAQAAAAKABUAAAABAAQAAAALABUAAAABAAQAAAAMABUAAAABAAQAAAANABUAAAACAAQAAAASABUAAAAAAAQAAAATABUAAAABAAQAAAAUABUAAAAGAAYAAAAVABUAAAABAAUAAAAWABUAAAAFAAYAAAAXABUAAAABAAQAAAAYABUAAAABAAQAAAAZABUAAAABAAQAAAAaABUAAAABAAQAAAAbABUAAAABAAQAAAAcABUAAAABAAQAAAAdABUAAAABAAQAAAAeABUAAAABAAQAAAAfABUAAAABAAQAAAAgABUAAAABAAQAAAAhABUAAAABAAQAAAAiABUAAAABAAQAAAAjABUAAAACAAQAAAAAABYAAAAAAAUAAAABABYAAAABAAUAAAACABYAAAABAAUAAAADABYAAAABAAUAAAAEABYAAAABAAUAAAAFABYAAAABAAUAAAAGABYAAAABAAUAAAAHABYAAAABAAUAAAAIABYAAAABAAUAAAAJABYAAAABAAUAAAAKABYAAAABAAUAAAALABYAAAABAAUAAAAMABYAAAABAAUAAAANABYAAAAFAAYAAAAOABYAAAABAAQAAAAPABYAAAABAAQAAAAQABYAAAABAAQAAAARABYAAAABAAQAAAASABYAAAAGAAYAAAATABYAAAABAAUAAAAUABYAAAABAAUAAAAVABYAAAABAAUAAAAWABYAAAABAAUAAAAXABYAAAABAAUAAAAYABYAAAABAAUAAAAZABYAAAABAAUAAAAaABYAAAABAAUAAAAbABYAAAABAAUAAAAcABYAAAABAAUAAAAdABYAAAABAAUAAAAeABYAAAABAAUAAAAfABYAAAABAAUAAAAgABYAAAABAAUAAAAhABYAAAABAAUAAAAiABYAAAABAAUAAAAjABYAAAACAAUAAAAAABcAAAAAAAYAAAABABcAAAABAAYAAAACABcAAAABAAYAAAADABcAAAABAAYAAAAEABcAAAABAAYAAAAFABcAAAABAAYAAAAGABcAAAABAAYAAAAHABcAAAABAAYAAAAIABcAAAABAAYAAAAJABcAAAABAAYAAAAKABcAAAABAAYAAAALABcAAAABAAYAAAAMABcAAAABAAYAAAANABcAAAABAAYAAAAOABcAAAABAAYAAAAPABcAAAABAAYAAAAQABcAAAABAAYAAAARABcAAAABAAYAAAASABcAAAABAAYAAAATABcAAAABAAYAAAAUABcAAAABAAYAAAAVABcAAAABAAYAAAAWABcAAAABAAYAAAAXABcAAAABAAYAAAAYABcAAAABAAYAAAAZABcAAAABAAYAAAAaABcAAAABAAYAAAAbABcAAAABAAYAAAAcABcAAAABAAYAAAAdABcAAAABAAYAAAAeABcAAAABAAYAAAAfABcAAAABAAYAAAAgABcAAAABAAYAAAAhABcAAAABAAYAAAAiABcAAAABAAYAAAAjABcAAAACAAYAAAA=")
+tile_set = SubResource("TileSet_d54mr")
+metadata/collision_profile = "none"
+metadata/usage = "visual_tiles"
+
+[node name="world_collision" type="TileMapLayer" parent="." unique_id=869775954]
+visible = false
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAQAAAABAAAAAAABAAQAAAACAAAAAAABAAQAAAADAAAAAAABAAQAAAAEAAAAAAABAAQAAAAFAAAAAAABAAQAAAAGAAAAAAABAAQAAAAHAAAAAAABAAQAAAAIAAAAAAABAAQAAAAJAAAAAAABAAQAAAAKAAAAAAABAAQAAAALAAAAAAABAAQAAAAMAAAAAAABAAQAAAANAAAAAAABAAQAAAAOAAAAAAABAAQAAAAPAAAAAAABAAQAAAAQAAAAAAABAAQAAAARAAAAAAABAAQAAAASAAAAAAABAAQAAAATAAAAAAABAAQAAAAUAAAAAAABAAQAAAAVAAAAAAABAAQAAAAWAAAAAAABAAQAAAAXAAAAAAABAAQAAAAYAAAAAAABAAQAAAAZAAAAAAABAAQAAAAaAAAAAAABAAQAAAAbAAAAAAABAAQAAAAcAAAAAAABAAQAAAAdAAAAAAABAAQAAAAeAAAAAAABAAQAAAAfAAAAAAABAAQAAAAgAAAAAAABAAQAAAAhAAAAAAABAAQAAAAiAAAAAAABAAQAAAAjAAAAAAACAAQAAAAAAAEAAAAAAAUAAAABAAEAAAAFAAUAAAACAAEAAAABAAYAAAADAAEAAAABAAYAAAAEAAEAAAABAAYAAAAFAAEAAAABAAYAAAAGAAEAAAABAAYAAAAHAAEAAAABAAYAAAAIAAEAAAABAAYAAAAJAAEAAAABAAYAAAAKAAEAAAABAAYAAAALAAEAAAABAAYAAAAMAAEAAAABAAYAAAANAAEAAAABAAYAAAAOAAEAAAABAAYAAAAPAAEAAAABAAYAAAAQAAEAAAABAAYAAAARAAEAAAABAAYAAAASAAEAAAABAAYAAAATAAEAAAABAAYAAAAUAAEAAAABAAYAAAAVAAEAAAABAAYAAAAWAAEAAAABAAYAAAAXAAEAAAABAAYAAAAYAAEAAAABAAYAAAAZAAEAAAABAAYAAAAaAAEAAAABAAYAAAAbAAEAAAABAAYAAAAcAAEAAAABAAYAAAAdAAEAAAABAAYAAAAeAAEAAAABAAYAAAAfAAEAAAABAAYAAAAgAAEAAAABAAYAAAAhAAEAAAABAAYAAAAiAAEAAAAGAAUAAAAjAAEAAAACAAUAAAAAAAIAAAAAAAUAAAABAAIAAAACAAUAAAACAAIAAAAAAAAAAAADAAIAAAABAAAAAAAEAAIAAAACAAAAAAAFAAIAAAADAAAAAAAGAAIAAAAEAAAAAAAHAAIAAAAFAAAAAAAIAAIAAAAGAAAAAAAJAAIAAAAHAAAAAAAKAAIAAAAAAAAAAAALAAIAAAABAAAAAAAMAAIAAAACAAAAAAANAAIAAAADAAAAAAAOAAIAAAAEAAAAAAAPAAIAAAAFAAAAAAAQAAIAAAAGAAAAAAARAAIAAAAHAAAAAAASAAIAAAAAAAAAAAAiAAIAAAAAAAUAAAAjAAIAAAACAAUAAAAAAAMAAAAAAAUAAAABAAMAAAACAAUAAAATAAMAAAADAAUAAAAiAAMAAAAAAAUAAAAjAAMAAAACAAUAAAAAAAQAAAAAAAUAAAABAAQAAAACAAUAAAATAAQAAAADAAUAAAAVAAQAAAAEAAQAAAAWAAQAAAAFAAQAAAAXAAQAAAAFAAQAAAAYAAQAAAAFAAQAAAAZAAQAAAAFAAQAAAAaAAQAAAAFAAQAAAAbAAQAAAAFAAQAAAAcAAQAAAAFAAQAAAAdAAQAAAAFAAQAAAAeAAQAAAAFAAQAAAAfAAQAAAAFAAQAAAAgAAQAAAAGAAQAAAAiAAQAAAAAAAUAAAAjAAQAAAACAAUAAAAAAAUAAAAAAAUAAAABAAUAAAACAAUAAAANAAUAAAAAAAQAAAAOAAUAAAACAAQAAAAQAAUAAAAEAAQAAAARAAUAAAAFAAQAAAASAAUAAAAGAAQAAAATAAUAAAADAAUAAAAiAAUAAAAAAAUAAAAjAAUAAAACAAUAAAAAAAYAAAAAAAUAAAABAAYAAAACAAUAAAAJAAYAAAAAAAQAAAAKAAYAAAABAAQAAAALAAYAAAABAAQAAAAMAAYAAAABAAQAAAANAAYAAAAGAAYAAAAOAAYAAAACAAUAAAATAAYAAAADAAUAAAAiAAYAAAAAAAUAAAAjAAYAAAACAAUAAAAAAAcAAAAAAAUAAAABAAcAAAACAAUAAAAIAAcAAAAAAAQAAAAJAAcAAAAGAAYAAAAKAAcAAAABAAUAAAALAAcAAAABAAUAAAAMAAcAAAABAAUAAAANAAcAAAABAAUAAAAOAAcAAAACAAUAAAATAAcAAAADAAUAAAAUAAcAAAAEAAQAAAAVAAcAAAAFAAQAAAAWAAcAAAAGAAQAAAAaAAcAAAAEAAUAAAAiAAcAAAAAAAUAAAAjAAcAAAACAAUAAAAAAAgAAAAAAAUAAAABAAgAAAACAAUAAAAHAAgAAAAAAAQAAAAIAAgAAAAGAAYAAAAJAAgAAAABAAUAAAAKAAgAAAABAAUAAAALAAgAAAABAAUAAAAMAAgAAAABAAUAAAANAAgAAAABAAUAAAAOAAgAAAACAAUAAAATAAgAAAADAAUAAAAeAAgAAAAEAAQAAAAfAAgAAAAFAAQAAAAgAAgAAAAFAAQAAAAhAAgAAAAGAAQAAAAiAAgAAAAAAAUAAAAjAAgAAAACAAUAAAAAAAkAAAAAAAUAAAABAAkAAAACAAUAAAADAAkAAAAEAAQAAAAEAAkAAAAFAAQAAAAFAAkAAAAFAAQAAAAGAAkAAAAFAAQAAAAHAAkAAAABAAYAAAAIAAkAAAAGAAUAAAAJAAkAAAABAAUAAAAKAAkAAAABAAUAAAALAAkAAAABAAUAAAAMAAkAAAABAAUAAAANAAkAAAABAAUAAAAOAAkAAAACAAUAAAAPAAkAAAAEAAQAAAAQAAkAAAAFAAQAAAARAAkAAAAGAAQAAAATAAkAAAADAAUAAAAiAAkAAAAAAAUAAAAjAAkAAAACAAUAAAAAAAoAAAAAAAUAAAABAAoAAAACAAUAAAAIAAoAAAAAAAUAAAAJAAoAAAAFAAUAAAAKAAoAAAABAAYAAAALAAoAAAABAAYAAAAMAAoAAAAGAAUAAAANAAoAAAAFAAUAAAAOAAoAAAACAAYAAAATAAoAAAADAAYAAAAaAAoAAAAEAAQAAAAbAAoAAAAGAAQAAAAiAAoAAAAAAAUAAAAjAAoAAAACAAUAAAAAAAsAAAAAAAUAAAABAAsAAAACAAUAAAAIAAsAAAAAAAUAAAAJAAsAAAACAAUAAAAMAAsAAAAAAAUAAAANAAsAAAACAAUAAAAiAAsAAAAAAAUAAAAjAAsAAAACAAUAAAAAAAwAAAAAAAUAAAABAAwAAAACAAUAAAAIAAwAAAAAAAYAAAAJAAwAAAACAAYAAAAMAAwAAAAAAAUAAAANAAwAAAACAAUAAAAWAAwAAAAAAAQAAAAXAAwAAAABAAQAAAAYAAwAAAACAAQAAAAiAAwAAAAAAAUAAAAjAAwAAAACAAUAAAAAAA0AAAAAAAUAAAABAA0AAAACAAUAAAAMAA0AAAAAAAYAAAANAA0AAAACAAYAAAAOAA0AAAAEAAQAAAAPAA0AAAAFAAQAAAAQAA0AAAAFAAQAAAARAA0AAAAFAAQAAAASAA0AAAAFAAQAAAATAA0AAAAFAAQAAAAUAA0AAAAFAAQAAAAVAA0AAAAFAAQAAAAWAA0AAAAGAAYAAAAXAA0AAAAEAAYAAAAYAA0AAAAFAAYAAAAZAA0AAAABAAQAAAAaAA0AAAAFAAQAAAAbAA0AAAAFAAQAAAAcAA0AAAAFAAQAAAAdAA0AAAAFAAQAAAAeAA0AAAAFAAQAAAAfAA0AAAAFAAQAAAAgAA0AAAAFAAQAAAAhAA0AAAAGAAQAAAAiAA0AAAAAAAUAAAAjAA0AAAACAAUAAAAAAA4AAAAAAAUAAAABAA4AAAACAAUAAAAWAA4AAAAAAAYAAAAXAA4AAAABAAYAAAAYAA4AAAAGAAUAAAAZAA4AAAACAAUAAAAiAA4AAAAAAAUAAAAjAA4AAAACAAUAAAAAAA8AAAAAAAUAAAABAA8AAAACAAUAAAAYAA8AAAAAAAUAAAAZAA8AAAACAAUAAAAiAA8AAAAAAAUAAAAjAA8AAAACAAUAAAAAABAAAAAAAAUAAAABABAAAAAFAAYAAAACABAAAAABAAQAAAADABAAAAABAAQAAAAEABAAAAABAAQAAAAFABAAAAABAAQAAAAGABAAAAABAAQAAAAHABAAAAABAAQAAAAIABAAAAABAAQAAAAJABAAAAABAAQAAAAKABAAAAACAAQAAAAYABAAAAAAAAUAAAAZABAAAAACAAUAAAAiABAAAAAAAAUAAAAjABAAAAACAAUAAAAAABEAAAAAAAUAAAABABEAAAABAAUAAAACABEAAAABAAUAAAADABEAAAABAAUAAAAEABEAAAABAAUAAAAFABEAAAABAAUAAAAGABEAAAABAAUAAAAHABEAAAABAAUAAAAIABEAAAABAAUAAAAJABEAAAABAAUAAAAKABEAAAACAAUAAAAYABEAAAAAAAYAAAAZABEAAAACAAYAAAAiABEAAAAAAAUAAAAjABEAAAACAAUAAAAAABIAAAAAAAYAAAABABIAAAABAAYAAAACABIAAAABAAYAAAADABIAAAABAAYAAAAEABIAAAABAAYAAAAFABIAAAABAAYAAAAGABIAAAABAAYAAAAHABIAAAABAAYAAAAIABIAAAABAAYAAAAJABIAAAABAAYAAAAKABIAAAACAAYAAAAiABIAAAAAAAYAAAAjABIAAAACAAYAAAAUABQAAAAAAAQAAAAVABQAAAABAAQAAAAWABQAAAACAAQAAAAAABUAAAAAAAQAAAABABUAAAABAAQAAAACABUAAAABAAQAAAADABUAAAABAAQAAAAEABUAAAABAAQAAAAFABUAAAABAAQAAAAGABUAAAABAAQAAAAHABUAAAABAAQAAAAIABUAAAABAAQAAAAJABUAAAABAAQAAAAKABUAAAABAAQAAAALABUAAAABAAQAAAAMABUAAAABAAQAAAANABUAAAACAAQAAAASABUAAAAAAAQAAAATABUAAAABAAQAAAAUABUAAAAGAAYAAAAVABUAAAABAAUAAAAWABUAAAAFAAYAAAAXABUAAAABAAQAAAAYABUAAAABAAQAAAAZABUAAAABAAQAAAAaABUAAAABAAQAAAAbABUAAAABAAQAAAAcABUAAAABAAQAAAAdABUAAAABAAQAAAAeABUAAAABAAQAAAAfABUAAAABAAQAAAAgABUAAAABAAQAAAAhABUAAAABAAQAAAAiABUAAAABAAQAAAAjABUAAAACAAQAAAAAABYAAAAAAAUAAAABABYAAAABAAUAAAACABYAAAABAAUAAAADABYAAAABAAUAAAAEABYAAAABAAUAAAAFABYAAAABAAUAAAAGABYAAAABAAUAAAAHABYAAAABAAUAAAAIABYAAAABAAUAAAAJABYAAAABAAUAAAAKABYAAAABAAUAAAALABYAAAABAAUAAAAMABYAAAABAAUAAAANABYAAAAFAAYAAAAOABYAAAABAAQAAAAPABYAAAABAAQAAAAQABYAAAABAAQAAAARABYAAAABAAQAAAASABYAAAAGAAYAAAATABYAAAABAAUAAAAUABYAAAABAAUAAAAVABYAAAABAAUAAAAWABYAAAABAAUAAAAXABYAAAABAAUAAAAYABYAAAABAAUAAAAZABYAAAABAAUAAAAaABYAAAABAAUAAAAbABYAAAABAAUAAAAcABYAAAABAAUAAAAdABYAAAABAAUAAAAeABYAAAABAAUAAAAfABYAAAABAAUAAAAgABYAAAABAAUAAAAhABYAAAABAAUAAAAiABYAAAABAAUAAAAjABYAAAACAAUAAAAAABcAAAAAAAYAAAABABcAAAABAAYAAAACABcAAAABAAYAAAADABcAAAABAAYAAAAEABcAAAABAAYAAAAFABcAAAABAAYAAAAGABcAAAABAAYAAAAHABcAAAABAAYAAAAIABcAAAABAAYAAAAJABcAAAABAAYAAAAKABcAAAABAAYAAAALABcAAAABAAYAAAAMABcAAAABAAYAAAANABcAAAABAAYAAAAOABcAAAABAAYAAAAPABcAAAABAAYAAAAQABcAAAABAAYAAAARABcAAAABAAYAAAASABcAAAABAAYAAAATABcAAAABAAYAAAAUABcAAAABAAYAAAAVABcAAAABAAYAAAAWABcAAAABAAYAAAAXABcAAAABAAYAAAAYABcAAAABAAYAAAAZABcAAAABAAYAAAAaABcAAAABAAYAAAAbABcAAAABAAYAAAAcABcAAAABAAYAAAAdABcAAAABAAYAAAAeABcAAAABAAYAAAAfABcAAAABAAYAAAAgABcAAAABAAYAAAAhABcAAAABAAYAAAAiABcAAAABAAYAAAAjABcAAAACAAYAAAA=")
+tile_set = SubResource("TileSet_d54mr")
+collision_enabled = false
+metadata/collision_profile = "world_solid"
+metadata/usage = "solid_tiles"
+
+[node name="generated_world_collision" type="StaticBody2D" parent="world_collision" unique_id=1887218326]
+collision_mask = 0
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1606804569]
+position = Vector2(576, 16)
+shape = SubResource("RectangleShape2D_qp06o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=332109621]
+position = Vector2(576, 48)
+shape = SubResource("RectangleShape2D_1h0h6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2080765849]
+position = Vector2(304, 80)
+shape = SubResource("RectangleShape2D_1x18l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=198031089]
+position = Vector2(1120, 80)
+shape = SubResource("RectangleShape2D_flp5u")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1567543785]
+position = Vector2(32, 112)
+shape = SubResource("RectangleShape2D_mj2d7")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1255116169]
+position = Vector2(624, 112)
+shape = SubResource("RectangleShape2D_qwh0x")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2507057]
+position = Vector2(1120, 112)
+shape = SubResource("RectangleShape2D_jwn2u")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=304830527]
+position = Vector2(32, 144)
+shape = SubResource("RectangleShape2D_kbgvm")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1889131566]
+position = Vector2(624, 144)
+shape = SubResource("RectangleShape2D_bamvr")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=273132991]
+position = Vector2(864, 144)
+shape = SubResource("RectangleShape2D_6nlgl")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1177438971]
+position = Vector2(1120, 144)
+shape = SubResource("RectangleShape2D_1bd1j")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=290902687]
+position = Vector2(32, 176)
+shape = SubResource("RectangleShape2D_u2hk4")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1169378573]
+position = Vector2(448, 176)
+shape = SubResource("RectangleShape2D_5348f")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=838780638]
+position = Vector2(576, 176)
+shape = SubResource("RectangleShape2D_xcaf6")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=549225950]
+position = Vector2(1120, 176)
+shape = SubResource("RectangleShape2D_sk58r")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=511086584]
+position = Vector2(32, 208)
+shape = SubResource("RectangleShape2D_7nw8j")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1651339767]
+position = Vector2(384, 208)
+shape = SubResource("RectangleShape2D_4uiai")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=857002128]
+position = Vector2(624, 208)
+shape = SubResource("RectangleShape2D_ihqdu")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2020916328]
+position = Vector2(1120, 208)
+shape = SubResource("RectangleShape2D_ll1et")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1742650519]
+position = Vector2(32, 240)
+shape = SubResource("RectangleShape2D_v455p")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=60237]
+position = Vector2(368, 240)
+shape = SubResource("RectangleShape2D_fkl0k")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=910591032]
+position = Vector2(672, 240)
+shape = SubResource("RectangleShape2D_c5n58")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1322029431]
+position = Vector2(848, 240)
+shape = SubResource("RectangleShape2D_f20m1")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=64654836]
+position = Vector2(1120, 240)
+shape = SubResource("RectangleShape2D_ht4lx")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=115652809]
+position = Vector2(32, 272)
+shape = SubResource("RectangleShape2D_pc33h")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1182253500]
+position = Vector2(352, 272)
+shape = SubResource("RectangleShape2D_eowsc")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1658328613]
+position = Vector2(624, 272)
+shape = SubResource("RectangleShape2D_b8bld")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1400741595]
+position = Vector2(1056, 272)
+shape = SubResource("RectangleShape2D_251ql")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1406731719]
+position = Vector2(32, 304)
+shape = SubResource("RectangleShape2D_axcxq")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2020639129]
+position = Vector2(336, 304)
+shape = SubResource("RectangleShape2D_yau4t")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1149663195]
+position = Vector2(624, 304)
+shape = SubResource("RectangleShape2D_8ect3")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1943062417]
+position = Vector2(1120, 304)
+shape = SubResource("RectangleShape2D_tjoap")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2064424823]
+position = Vector2(32, 336)
+shape = SubResource("RectangleShape2D_e7cwn")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1696371526]
+position = Vector2(368, 336)
+shape = SubResource("RectangleShape2D_mme3o")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1607088576]
+position = Vector2(624, 336)
+shape = SubResource("RectangleShape2D_r6ohc")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1912664641]
+position = Vector2(864, 336)
+shape = SubResource("RectangleShape2D_o06oo")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=634141922]
+position = Vector2(1120, 336)
+shape = SubResource("RectangleShape2D_ot57j")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2092668346]
+position = Vector2(32, 368)
+shape = SubResource("RectangleShape2D_s64wd")
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1469123189]
+position = Vector2(288, 368)
+shape = SubResource("RectangleShape2D_hllga")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2068945794]
+position = Vector2(416, 368)
+shape = SubResource("RectangleShape2D_vm1pw")
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1231555970]
+position = Vector2(1120, 368)
+shape = SubResource("RectangleShape2D_gi5ac")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1186085224]
+position = Vector2(32, 400)
+shape = SubResource("RectangleShape2D_galua")
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1666478706]
+position = Vector2(288, 400)
+shape = SubResource("RectangleShape2D_a8n1r")
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=459727430]
+position = Vector2(416, 400)
+shape = SubResource("RectangleShape2D_oik8o")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1082201778]
+position = Vector2(752, 400)
+shape = SubResource("RectangleShape2D_j0o5t")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1007531262]
+position = Vector2(1120, 400)
+shape = SubResource("RectangleShape2D_f26wl")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1282002274]
+position = Vector2(32, 432)
+shape = SubResource("RectangleShape2D_qec7y")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1188495492]
+position = Vector2(768, 432)
+shape = SubResource("RectangleShape2D_tlypj")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=874370387]
+position = Vector2(32, 464)
+shape = SubResource("RectangleShape2D_abxbj")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=84565182]
+position = Vector2(768, 464)
+shape = SubResource("RectangleShape2D_fge8i")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1030522392]
+position = Vector2(1120, 464)
+shape = SubResource("RectangleShape2D_4r6ki")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=188891966]
+position = Vector2(32, 496)
+shape = SubResource("RectangleShape2D_w2haq")
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1353812981]
+position = Vector2(800, 496)
+shape = SubResource("RectangleShape2D_iw63w")
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1578780746]
+position = Vector2(1120, 496)
+shape = SubResource("RectangleShape2D_qvgwa")
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1193554639]
+position = Vector2(176, 528)
+shape = SubResource("RectangleShape2D_37cix")
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1530731035]
+position = Vector2(800, 528)
+shape = SubResource("RectangleShape2D_r0l3j")
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1469095363]
+position = Vector2(1120, 528)
+shape = SubResource("RectangleShape2D_jjymf")
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=116593221]
+position = Vector2(176, 560)
+shape = SubResource("RectangleShape2D_oc4vu")
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1414723536]
+position = Vector2(800, 560)
+shape = SubResource("RectangleShape2D_1e0tr")
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1214942730]
+position = Vector2(1120, 560)
+shape = SubResource("RectangleShape2D_vpmcr")
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1301003038]
+position = Vector2(176, 592)
+shape = SubResource("RectangleShape2D_nwt78")
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2025866271]
+position = Vector2(1120, 592)
+shape = SubResource("RectangleShape2D_vv20b")
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=164597491]
+position = Vector2(688, 656)
+shape = SubResource("RectangleShape2D_vuoha")
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=1772140724]
+position = Vector2(224, 688)
+shape = SubResource("RectangleShape2D_4wrru")
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=467918928]
+position = Vector2(864, 688)
+shape = SubResource("RectangleShape2D_o7y14")
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=995483224]
+position = Vector2(576, 720)
+shape = SubResource("RectangleShape2D_qnd42")
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="world_collision/generated_world_collision" unique_id=2029375325]
+position = Vector2(576, 752)
+shape = SubResource("RectangleShape2D_8os3j")
+
+[node name="world_decor" type="TileMapLayer" parent="." unique_id=155034589]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAATAAIAAAADAAYAAwAbAAMAAQABAAEAAAASAAQAAQABAAEAAAAGAAgAAQAHAAEAAAAOAAwAAQADAAEAAAAVAAwAAQAHAAEAAAAhAAwAAQABAAEAAAA=")
+tile_set = SubResource("TileSet_d54mr")
+metadata/collision_profile = "none"
+metadata/usage = "decor_tiles"
+
+[node name="ladder" type="TileMapLayer" parent="." unique_id=1659546291]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAUAAMAAQABAAUAAAAhAAMAAQABAAUAAAAPAAQAAQABAAUAAAAUAAQAAQADAAUAAAAhAAQAAQAHAAUAAAAPAAUAAQADAAUAAAAUAAUAAQADAAUAAAAhAAUAAQADAAUAAAAPAAYAAQADAAUAAAAUAAYAAQABAAUAAgAhAAYAAQADAAUAAAAPAAcAAQADAAUAAAAhAAcAAQADAAUAAAACAAgAAQABAAUAAAAPAAgAAQABAAUAAgASAAgAAQABAAUAAAACAAkAAQADAAUAAAASAAkAAQADAAUAAAACAAoAAQADAAUAAAASAAoAAQADAAUAAAACAAsAAQADAAUAAAASAAsAAQADAAUAAAACAAwAAQADAAUAAAASAAwAAQABAAUAAgACAA0AAQADAAUAAAACAA4AAQADAAUAAAACAA8AAQABAAUAAgALAA8AAQABAAUAAAALABAAAQADAAUAAAALABEAAQADAAUAAAALABIAAQADAAUAAAALABMAAQADAAUAAAALABQAAQABAAUAAgA=")
+tile_set = SubResource("TileSet_d54mr")
+collision_enabled = false
+metadata/activation_group = "ladder"
+metadata/collision_profile = "ladder_area"
+metadata/player_group_required = "player"
+metadata/usage = "ladder_tiles"
+
+[node name="entities" type="Node2D" parent="." unique_id=992349532]
+texture_filter = 1
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+
+[node name="saw2" parent="entities" unique_id=883987346 instance=ExtResource("13_ql2ws")]
+position = Vector2(480, 697)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/auto_detect_limits = true
+metadata/collision_profile = "trap"
+metadata/damage = 1
+metadata/detect_distance = 1200.0
+metadata/edge_wait_time = 0.12
+metadata/entity_type = "saw"
+metadata/frame_step_pixels = 8.0
+metadata/hit_cooldown = 0.4
+metadata/move_speed = 80.0
+metadata/patrol_left_offset = -180.0
+metadata/patrol_right_offset = 180.0
+metadata/ray_length = 30.0
+metadata/run_anim = "run"
+metadata/spawn_kind = "trap"
+metadata/stop_anim = "stop"
+metadata/use_patrol_limits = false
+metadata/wall_collision_mask = 1
+metadata/wall_margin = 0.0
+
+[node name="premodules4" parent="entities" unique_id=675063163 instance=ExtResource("15_hkh11")]
+position = Vector2(592, 113)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/entity_type = "module_pickup"
+metadata/feeds_group = "premodules"
+metadata/inventory_add_count = 1
+metadata/module_type = "power_module"
+metadata/spawn_kind = "pickup"
+
+[node name="premodules5" parent="entities" unique_id=1569721446 instance=ExtResource("15_hkh11")]
+position = Vector2(1072, 370)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/entity_type = "module_pickup"
+metadata/feeds_group = "premodules"
+metadata/inventory_add_count = 1
+metadata/module_type = "power_module"
+metadata/spawn_kind = "pickup"
+
+[node name="premodules6" parent="entities" unique_id=682934695 instance=ExtResource("15_hkh11")]
+position = Vector2(880, 82)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/entity_type = "module_pickup"
+metadata/feeds_group = "premodules"
+metadata/inventory_add_count = 1
+metadata/module_type = "power_module"
+metadata/spawn_kind = "pickup"
+
+[node name="modul4" parent="entities" unique_id=220229498 instance=ExtResource("19_6h1ff")]
+position = Vector2(945, 657)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/activates_group = "moduletable_active"
+metadata/animation_start_delay = 0.5
+metadata/consumes_inventory_module = true
+metadata/entity_type = "module_table"
+metadata/feeds_terminal_group = "terminal"
+metadata/spawn_kind = "interactive"
+
+[node name="modul5" parent="entities" unique_id=807007878 instance=ExtResource("19_6h1ff")]
+position = Vector2(881, 657)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/activates_group = "moduletable_active"
+metadata/animation_start_delay = 0.5
+metadata/consumes_inventory_module = true
+metadata/entity_type = "module_table"
+metadata/feeds_terminal_group = "terminal"
+metadata/spawn_kind = "interactive"
+
+[node name="modul6" parent="entities" unique_id=1614202810 instance=ExtResource("19_6h1ff")]
+position = Vector2(1008, 657)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/activates_group = "moduletable_active"
+metadata/animation_start_delay = 0.5
+metadata/consumes_inventory_module = true
+metadata/entity_type = "module_table"
+metadata/feeds_terminal_group = "terminal"
+metadata/spawn_kind = "interactive"
+
+[node name="door_left2" parent="entities" unique_id=1752906081 instance=ExtResource("21_pbygd")]
+position = Vector2(33.5, 640)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/checkpoint_offset = "48,0"
+metadata/collision_profile = "door"
+metadata/door_id = "door_left"
+metadata/entity_type = "door"
+metadata/spawn_kind = "interactive"
+
+[node name="door_right2" parent="entities" unique_id=1640344999 instance=ExtResource("21_pbygd")]
+position = Vector2(1111, 640)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/checkpoint_offset = "48,0"
+metadata/collision_profile = "door"
+metadata/door_id = "door_right"
+metadata/entity_type = "door"
+metadata/spawn_kind = "interactive"
+
+[node name="terminal_main2" parent="entities" unique_id=1303498945 instance=ExtResource("23_7hlpv")]
+position = Vector2(1076.5, 651)
+required_active_moduletables = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/activation_chain = "modules->premodules->terminal"
+metadata/activation_source_group = "premodules"
+metadata/entity_type = "terminal"
+metadata/required_active_moduletables = 3
+metadata/spawn_kind = "interactive"
+metadata/target_door_id = "door_right"
+metadata/terminal_id = "terminal_main"
+
+[node name="robot3" parent="entities" unique_id=874088404 instance=ExtResource("25_ly6fu")]
+position = Vector2(780, 598)
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/death_anim = "death"
+metadata/detect_diameter = 520.0
+metadata/edge_check_down = 70.0
+metadata/edge_check_forward = 30.0
+metadata/entity_type = "robot"
+metadata/flip_visual_by_dir = true
+metadata/floor_flat_tolerance = 8.0
+metadata/floor_mask = 1
+metadata/gravity_scale = 1.0
+metadata/is_boss = false
+metadata/lose_radius = 340.0
+metadata/lose_sight_delay = 0.2
+metadata/max_health = 3
+metadata/max_step_down = 6.0
+metadata/mid_probe_ratio = 0.5
+metadata/near_probe_forward = 3.0
+metadata/queue_free_on_death_end = true
+metadata/refresh_target_interval = 0.2
+metadata/spawn_kind = "enemy"
+metadata/start_direction = 1
+metadata/trap_mask = 8
+metadata/turn_cooldown = 0.12
+metadata/vision_block_mask = 1
+metadata/walk_anim = "walk"
+metadata/walk_speed = 70.0
+metadata/wall_check_forward = 24.0
+metadata/xp_reward = 20
+
+[node name="robot4" parent="entities" unique_id=870436550 instance=ExtResource("25_ly6fu")]
+position = Vector2(885, 342)
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/death_anim = "death"
+metadata/detect_diameter = 520.0
+metadata/edge_check_down = 70.0
+metadata/edge_check_forward = 30.0
+metadata/entity_type = "robot"
+metadata/flip_visual_by_dir = true
+metadata/floor_flat_tolerance = 8.0
+metadata/floor_mask = 1
+metadata/gravity_scale = 1.0
+metadata/is_boss = false
+metadata/lose_radius = 340.0
+metadata/lose_sight_delay = 0.2
+metadata/max_health = 3
+metadata/max_step_down = 6.0
+metadata/mid_probe_ratio = 0.5
+metadata/near_probe_forward = 3.0
+metadata/queue_free_on_death_end = true
+metadata/refresh_target_interval = 0.2
+metadata/spawn_kind = "enemy"
+metadata/start_direction = 1
+metadata/trap_mask = 8
+metadata/turn_cooldown = 0.12
+metadata/vision_block_mask = 1
+metadata/walk_anim = "walk"
+metadata/walk_speed = 70.0
+metadata/wall_check_forward = 24.0
+metadata/xp_reward = 20
+
+[node name="sky5" parent="entities" unique_id=215373950 instance=ExtResource("27_s3aki")]
+position = Vector2(856.333, 473)
+collision_layer = 4
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/attack_block_mask = 1
+metadata/attack_contact_extra_range = 4.0
+metadata/attack_cooldown = 0.35
+metadata/attack_max_duration = 1.0
+metadata/attack_path_end_padding = 6.0
+metadata/attack_path_side_probe = 8.0
+metadata/attack_speed = 220.0
+metadata/attack_vertical_tolerance = 22.0
+metadata/bullet_group = "player_bullet"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/contact_damage = 1
+metadata/death_anim = "death"
+metadata/detect_radius = 220.0
+metadata/detect_vertical_tolerance = 220.0
+metadata/die_on_any_dash_collision = true
+metadata/die_on_player_hit = true
+metadata/dodge_axis = 0
+metadata/dodge_check_radius = 180.0
+metadata/dodge_cooldown = 0.35
+metadata/dodge_duration = 0.18
+metadata/dodge_speed = 170.0
+metadata/enable_bullet_dodge = true
+metadata/entity_type = "sky"
+metadata/flip_by_velocity_x = true
+metadata/hurt_anim = "hurt"
+metadata/hurt_duration = 0.16
+metadata/idle_anim = "idle"
+metadata/is_boss = false
+metadata/lose_radius = 320.0
+metadata/max_health = 3
+metadata/move_anim = "fly"
+metadata/queue_free_after_death = true
+metadata/refresh_target_interval = 0.15
+metadata/retreat_duration = 0.3
+metadata/retreat_speed = 150.0
+metadata/spawn_kind = "enemy"
+metadata/use_line_of_sight = true
+metadata/vision_block_mask = 1
+metadata/xp_reward = 12
+
+[node name="sky6" parent="entities" unique_id=1818886370 instance=ExtResource("27_s3aki")]
+position = Vector2(1065, 470.667)
+collision_layer = 4
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/attack_block_mask = 1
+metadata/attack_contact_extra_range = 4.0
+metadata/attack_cooldown = 0.35
+metadata/attack_max_duration = 1.0
+metadata/attack_path_end_padding = 6.0
+metadata/attack_path_side_probe = 8.0
+metadata/attack_speed = 220.0
+metadata/attack_vertical_tolerance = 22.0
+metadata/bullet_group = "player_bullet"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/contact_damage = 1
+metadata/death_anim = "death"
+metadata/detect_radius = 220.0
+metadata/detect_vertical_tolerance = 220.0
+metadata/die_on_any_dash_collision = true
+metadata/die_on_player_hit = true
+metadata/dodge_axis = 0
+metadata/dodge_check_radius = 180.0
+metadata/dodge_cooldown = 0.35
+metadata/dodge_duration = 0.18
+metadata/dodge_speed = 170.0
+metadata/enable_bullet_dodge = true
+metadata/entity_type = "sky"
+metadata/flip_by_velocity_x = true
+metadata/hurt_anim = "hurt"
+metadata/hurt_duration = 0.16
+metadata/idle_anim = "idle"
+metadata/is_boss = false
+metadata/lose_radius = 320.0
+metadata/max_health = 3
+metadata/move_anim = "fly"
+metadata/queue_free_after_death = true
+metadata/refresh_target_interval = 0.15
+metadata/retreat_duration = 0.3
+metadata/retreat_speed = 150.0
+metadata/spawn_kind = "enemy"
+metadata/use_line_of_sight = true
+metadata/vision_block_mask = 1
+metadata/xp_reward = 12
+
+[node name="sky7" parent="entities" unique_id=1362091569 instance=ExtResource("27_s3aki")]
+position = Vector2(837, 85)
+collision_layer = 4
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/attack_block_mask = 1
+metadata/attack_contact_extra_range = 4.0
+metadata/attack_cooldown = 0.35
+metadata/attack_max_duration = 1.0
+metadata/attack_path_end_padding = 6.0
+metadata/attack_path_side_probe = 8.0
+metadata/attack_speed = 220.0
+metadata/attack_vertical_tolerance = 22.0
+metadata/bullet_group = "player_bullet"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/contact_damage = 1
+metadata/death_anim = "death"
+metadata/detect_radius = 220.0
+metadata/detect_vertical_tolerance = 220.0
+metadata/die_on_any_dash_collision = true
+metadata/die_on_player_hit = true
+metadata/dodge_axis = 0
+metadata/dodge_check_radius = 180.0
+metadata/dodge_cooldown = 0.35
+metadata/dodge_duration = 0.18
+metadata/dodge_speed = 170.0
+metadata/enable_bullet_dodge = true
+metadata/entity_type = "sky"
+metadata/flip_by_velocity_x = true
+metadata/hurt_anim = "hurt"
+metadata/hurt_duration = 0.16
+metadata/idle_anim = "idle"
+metadata/is_boss = false
+metadata/lose_radius = 320.0
+metadata/max_health = 3
+metadata/move_anim = "fly"
+metadata/queue_free_after_death = true
+metadata/refresh_target_interval = 0.15
+metadata/retreat_duration = 0.3
+metadata/retreat_speed = 150.0
+metadata/spawn_kind = "enemy"
+metadata/use_line_of_sight = true
+metadata/vision_block_mask = 1
+metadata/xp_reward = 12
+
+[node name="sky8" parent="entities" unique_id=1147034347 instance=ExtResource("27_s3aki")]
+position = Vector2(88.3333, 120.33299)
+collision_layer = 4
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim = "attack"
+metadata/attack_block_mask = 1
+metadata/attack_contact_extra_range = 4.0
+metadata/attack_cooldown = 0.35
+metadata/attack_max_duration = 1.0
+metadata/attack_path_end_padding = 6.0
+metadata/attack_path_side_probe = 8.0
+metadata/attack_speed = 220.0
+metadata/attack_vertical_tolerance = 22.0
+metadata/bullet_group = "player_bullet"
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/contact_damage = 1
+metadata/death_anim = "death"
+metadata/detect_radius = 220.0
+metadata/detect_vertical_tolerance = 220.0
+metadata/die_on_any_dash_collision = true
+metadata/die_on_player_hit = true
+metadata/dodge_axis = 0
+metadata/dodge_check_radius = 180.0
+metadata/dodge_cooldown = 0.35
+metadata/dodge_duration = 0.18
+metadata/dodge_speed = 170.0
+metadata/enable_bullet_dodge = true
+metadata/entity_type = "sky"
+metadata/flip_by_velocity_x = true
+metadata/hurt_anim = "hurt"
+metadata/hurt_duration = 0.16
+metadata/idle_anim = "idle"
+metadata/is_boss = false
+metadata/lose_radius = 320.0
+metadata/max_health = 3
+metadata/move_anim = "fly"
+metadata/queue_free_after_death = true
+metadata/refresh_target_interval = 0.15
+metadata/retreat_duration = 0.3
+metadata/retreat_speed = 150.0
+metadata/spawn_kind = "enemy"
+metadata/use_line_of_sight = true
+metadata/vision_block_mask = 1
+metadata/xp_reward = 12
+
+[node name="woolf2" parent="entities" unique_id=443927379 instance=ExtResource("29_d54mr")]
+position = Vector2(127, 451)
+collision_layer = 4
+collision_mask = 3
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/attack_anim_fps = 10.0
+metadata/attack_cooldown = 0.35
+metadata/attack_damage = 1
+metadata/attack_hit_frame = 1
+metadata/attack_range = 12.0
+metadata/attack_vertical_tolerance = 44.0
+metadata/avoid_fall = true
+metadata/back_push_cooldown = 0.25
+metadata/back_push_force_x = 220.0
+metadata/back_push_range = 8.0
+metadata/back_push_separation_x = 2.0
+metadata/blocked_wait_time = 0.55
+metadata/chase_stop_distance = 14.0
+metadata/cliff_check_depth = 72.0
+metadata/cliff_check_distance = 36.0
+metadata/collision_layer = 4
+metadata/collision_mask = 3
+metadata/collision_profile = "enemy"
+metadata/death_fallback_time = 0.7
+metadata/detect_radius = 360.0
+metadata/enable_back_push = true
+metadata/end_attack_on_hit_frame = true
+metadata/entity_type = "woolf"
+metadata/gravity = 900.0
+metadata/hurt_duration = 0.2
+metadata/hurt_reaction_cooldown = 0.2
+metadata/is_boss = false
+metadata/lose_radius = 520.0
+metadata/lose_target_if_airborne = true
+metadata/max_health = 6
+metadata/run_speed = 180.0
+metadata/scan_turn_interval = 1.2
+metadata/search_anchor_slack = 4.0
+metadata/search_duration = 2.2
+metadata/search_turn_interval = 0.55
+metadata/spawn_kind = "enemy"
+metadata/stop_on_damage_hit = false
+metadata/target_refresh_interval = 0.2
+metadata/trap_check_distance = 42.0
+metadata/trap_check_radius = 14.0
+metadata/trap_collision_mask = 8
+metadata/use_damage_area_as_attack_radius = true
+metadata/vision_angle_deg = 100.0
+metadata/vision_height_tolerance = 120.0
+metadata/wall_check_distance = 26.0
+metadata/wall_collision_mask = 1
+metadata/xp_reward = 16
+
+[node name="  locker2" parent="entities" unique_id=2105633717 instance=ExtResource("33_flp5u")]
+position = Vector2(-1096, 673)
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/entity_type = "locker"
+metadata/spawn_kind = "interactive"
+
+[node name="player_spawn_main2" parent="entities" unique_id=1206836026 instance=ExtResource("31_1h0h6")]
+position = Vector2(88, 653)
+collision_layer = 2
+collision_mask = 13
+metadata/entity_layer = "true"
+metadata/position_mode = "tile_object_center"
+metadata/schema = "entity_objects_v1"
+metadata/abyss_fallback_y = 1200.0
+metadata/abyss_margin = 160.0
+metadata/auto_flip_visual_compensation = true
+metadata/collision_layer = 2
+metadata/collision_mask = 13
+metadata/collision_profile = "player"
+metadata/death_anim_time = 0.6
+metadata/entity_type = "player_spawn"
+metadata/hurt_anim_time = 0.25
+metadata/jump_velocity = -350.0
+metadata/knockback_duration = 0.12
+metadata/knockback_force_x = 220.0
+metadata/knockback_force_y = -170.0
+metadata/ladder_speed = 120.0
+metadata/max_health = 4
+metadata/run_speed = 230.0
+metadata/shoot_cooldown = 0.14
+metadata/spawn_id = "spawn_main"
+metadata/spawn_kind = "player_spawn"
+metadata/walk_speed = 140.0
+
+[node name="ladder_area" parent="." unique_id=957971493 instance=ExtResource("35_hkh11")]
+collision_mask = 3
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="ladder_area" unique_id=1454800628]
+position = Vector2(80, 384)
+shape = SubResource("RectangleShape2D_mlw7m")
+
+[node name="@CollisionShape2D@71441" type="CollisionShape2D" parent="ladder_area" unique_id=1485784276]
+position = Vector2(368, 576)
+shape = SubResource("RectangleShape2D_t2lqh")
+
+[node name="@CollisionShape2D@71442" type="CollisionShape2D" parent="ladder_area" unique_id=1732367520]
+position = Vector2(496, 208)
+shape = SubResource("RectangleShape2D_f8d2u")
+
+[node name="@CollisionShape2D@71443" type="CollisionShape2D" parent="ladder_area" unique_id=996797666]
+position = Vector2(592, 336)
+shape = SubResource("RectangleShape2D_wlx6i")
+
+[node name="@CollisionShape2D@71444" type="CollisionShape2D" parent="ladder_area" unique_id=1236274324]
+position = Vector2(656, 160)
+shape = SubResource("RectangleShape2D_sv3ox")
+
+[node name="@CollisionShape2D@71445" type="CollisionShape2D" parent="ladder_area" unique_id=1643176683]
+position = Vector2(1071, 221.5)
+shape = SubResource("RectangleShape2D_xt56g")

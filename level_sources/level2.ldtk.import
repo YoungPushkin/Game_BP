@@ -1,0 +1,32 @@
+[remap]
+
+importer="LDtk_world.import"
+type="PackedScene"
+uid="uid://b370x0xsdfpbu"
+path="res://.godot/imported/level2.ldtk-42048bb6469b42f5d98442666c1b35f5.scn"
+
+[deps]
+
+files=["res://level_sources/level2/tilesets/level2-tileset-32x32.res", "res://level_sources/level2/tilesets/level2-tileset-48x48.res", "res://.godot/imported/level2.ldtk-42048bb6469b42f5d98442666c1b35f5-Level_0-.scn"]
+
+source_file="res://level_sources/level2.ldtk"
+dest_files=["res://.godot/imported/level2.ldtk-42048bb6469b42f5d98442666c1b35f5.scn", "res://level_sources/level2/tilesets/level2-tileset-32x32.res", "res://level_sources/level2/tilesets/level2-tileset-48x48.res", "res://.godot/imported/level2.ldtk-42048bb6469b42f5d98442666c1b35f5-Level_0-.scn"]
+
+[params]
+
+world_add_metadata=true
+world_post_import_script=""
+Tilesets=""
+tileset_add_metadata=true
+import_tileset_custom_data=true
+tileset_post_import_script="res://scripts/ldtk/level2_tileset.gd"
+Levels=""
+level_add_metadata=true
+import_all_levels=true
+levels_to_import="0,1"
+pack_levels=true
+level_post_import_script="res://scripts/ldtk/level2_level.gd"
+Entities=""
+import_entities=true
+entity_add_metadata=true
+entity_post_import_script="res://scripts/ldtk/level2_entities.gd"

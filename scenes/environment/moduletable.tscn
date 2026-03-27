@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cchdhd0hrdxhv"]
+
+[ext_resource type="Texture2D" uid="uid://dpb65bi7t0sg1" path="res://assets/props/Chest.png" id="1_mh7km"]
+[ext_resource type="Texture2D" uid="uid://dju7d5gg58to4" path="res://assets/tilesets/material.png" id="2_h3ctm"]
+[ext_resource type="Script" uid="uid://f6pcutolp6c1" path="res://scripts/environment/moduletable.gd" id="2_moduletable"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyx8f"]
+atlas = ExtResource("2_h3ctm")
+region = Rect2(87.89502, 217.29828, 48.186462, 49.60373)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cppmw"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwwxj"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdbev"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kylht"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47oo3"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wokvg"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm61y"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17r6o"]
+atlas = ExtResource("1_mh7km")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6bxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cppmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwwxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdbev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kylht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47oo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wokvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm61y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17r6o")
+}],
+"loop": true,
+"name": &"moduletable",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh7km"]
+size = Vector2(30, 24)
+
+[node name="moduletable" type="Area2D" unique_id=220229498]
+script = ExtResource("2_moduletable")
+animation_start_delay = 0.5
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1749966900]
+position = Vector2(0, 5)
+
+[node name="PlacedModule" type="Sprite2D" parent="Marker2D" unique_id=872903542]
+visible = false
+position = Vector2(0, -1.000001)
+scale = Vector2(0.8229167, 0.82291675)
+texture = SubResource("AtlasTexture_eyx8f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1964467275]
+sprite_frames = SubResource("SpriteFrames_e6bxn")
+animation = &"moduletable"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119555331]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_mh7km")

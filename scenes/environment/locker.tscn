@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://hj65x7dstlyj"]
+
+[ext_resource type="Texture2D" uid="uid://dvbnasyvrlucb" path="res://assets/tilesets/closet.png" id="1_eks1q"]
+[ext_resource type="Script" path="res://scripts/environment/locker.gd" id="2_f6lgx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcspt"]
+size = Vector2(30, 35)
+
+[node name="locker" type="Area2D" unique_id=2105633717]
+script = ExtResource("2_f6lgx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2107392109]
+position = Vector2(1211, -18)
+texture = ExtResource("1_eks1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1482512194]
+position = Vector2(1211, -17.5)
+shape = SubResource("RectangleShape2D_hcspt")

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cjp37pap80yok"]
+
+[ext_resource type="PackedScene" uid="uid://62o3vkvptsea" path="res://inventory/slot.tscn" id="1_kb3do"]
+[ext_resource type="Script" path="res://scripts/inventory/inventory_panel.gd" id="2_inventory"]
+
+[node name="inventory_panel" type="Panel" unique_id=1727249854]
+offset_right = 538.0
+offset_bottom = 78.0
+script = ExtResource("2_inventory")
+
+[node name="slot" parent="." unique_id=154458102 instance=ExtResource("1_kb3do")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 63.388058
+offset_bottom = 54.0
+
+[node name="slot2" parent="." unique_id=1722081742 instance=ExtResource("1_kb3do")]
+layout_mode = 1
+offset_left = 159.0
+offset_top = 5.0
+offset_right = 159.0
+offset_bottom = 5.0
+
+[node name="slot3" parent="." unique_id=148124733 instance=ExtResource("1_kb3do")]
+layout_mode = 1
+offset_left = 261.0
+offset_top = 5.0
+offset_right = 261.0
+offset_bottom = 7.0
+
+[node name="slot4" parent="." unique_id=1432145665 instance=ExtResource("1_kb3do")]
+layout_mode = 1
+offset_left = 366.0
+offset_top = 5.0
+offset_right = 366.0
+offset_bottom = 7.0
+
+[node name="slot5" parent="." unique_id=532684600 instance=ExtResource("1_kb3do")]
+layout_mode = 1
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 465.0
+offset_bottom = 5.0

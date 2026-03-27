@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://732kl618arca"]
+
+[ext_resource type="Script" uid="uid://c7gdptcw7j56e" path="res://scripts/traps/saw.gd" id="1_ddabk"]
+[ext_resource type="Texture2D" uid="uid://bbdavklyj4m5o" path="res://assets/props/Saw.png" id="2_m2ud2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddabk"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2ud2"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reoe3"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8b65"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_facbu"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1qrp"]
+atlas = ExtResource("2_m2ud2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2t1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddabk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2ud2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reoe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8b65")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_facbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1qrp")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2cqfq"]
+radius = 16.124516
+
+[node name="saw" type="Area2D" unique_id=883987346]
+collision_layer = 8
+script = ExtResource("1_ddabk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1950167471]
+light_mask = 8
+position = Vector2(-16, -11)
+sprite_frames = SubResource("SpriteFrames_d2t1y")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1652164399]
+light_mask = 8
+position = Vector2(-16, -11)
+shape = SubResource("CircleShape2D_2cqfq")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=415462650]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://62o3vkvptsea"]
+
+[ext_resource type="Texture2D" uid="uid://d58p2bjlt5cv" path="res://assets/tilesets/Sample-InventorySlotsSet.png" id="1_u4i3g"]
+[ext_resource type="Texture2D" uid="uid://dju7d5gg58to4" path="res://assets/tilesets/material.png" id="2_sthnt"]
+[ext_resource type="Script" uid="uid://csc56rc47sdjn" path="res://scripts/inventory/slot.gd" id="3_slot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sthnt"]
+atlas = ExtResource("1_u4i3g")
+region = Rect2(109.60076, 77.10405, 28.535545, 29.457428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87gbl"]
+atlas = ExtResource("2_sthnt")
+region = Rect2(85.70398, 223.12363, 52.818054, 39.695587)
+
+[node name="slot" type="Panel" unique_id=154458102]
+offset_right = 72.65116
+offset_bottom = 71.0
+size_flags_horizontal = 4
+script = ExtResource("3_slot")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1090397599]
+position = Vector2(34.210938, 37.300182)
+scale = Vector2(3.0563614, 2.983045)
+texture = SubResource("AtlasTexture_sthnt")
+
+[node name="CenterContainer" type="CenterContainer" parent="background" unique_id=135235910]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.999999
+offset_top = -14.500003
+offset_right = 26.0
+offset_bottom = 25.499996
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="item" type="Sprite2D" parent="background/CenterContainer" unique_id=676700740]
+visible = false
+position = Vector2(0.35886273, -0.5367184)
+scale = Vector2(0.30287254, 0.30287254)
+texture = SubResource("AtlasTexture_87gbl")

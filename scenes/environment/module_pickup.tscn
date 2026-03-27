@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bqyd77t4kb8qx"]
+
+[ext_resource type="Texture2D" uid="uid://dju7d5gg58to4" path="res://assets/tilesets/material.png" id="1_ql0of"]
+[ext_resource type="Script" uid="uid://5el2euceykyg" path="res://scripts/environment/module_pickup.gd" id="2_rw7j8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk2bs"]
+atlas = ExtResource("1_ql0of")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ao3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk2bs")
+}],
+"loop": true,
+"name": &"modul",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sjys"]
+size = Vector2(30, 26)
+
+[node name="module_pickup" type="Area2D" unique_id=675063163]
+position = Vector2(1391, 296)
+script = ExtResource("2_rw7j8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1530156502]
+sprite_frames = SubResource("SpriteFrames_3ao3s")
+animation = &"modul"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1712231311]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_4sjys")

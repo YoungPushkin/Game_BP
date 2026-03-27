@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxltc51ramdv2"]
+
+[ext_resource type="Texture2D" uid="uid://bmcoliupqdaaw" path="res://assets/player/3 Hands/1 Biker/3.png" id="3_2nqeo"]
+[ext_resource type="PackedScene" uid="uid://v6yef2rbigde" path="res://scenes/player/guns.tscn" id="6_pf3e1"]
+[ext_resource type="Script" uid="uid://evigx876wkah" path="res://scripts/player/hands.gd" id="7_hands"]
+
+[node name="hands" type="Node2D" unique_id=358824238]
+script = ExtResource("7_hands")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=883294046]
+position = Vector2(0, -1)
+texture = ExtResource("3_2nqeo")
+
+[node name="guns" parent="." unique_id=965577640 instance=ExtResource("6_pf3e1")]
+position = Vector2(10, -1)

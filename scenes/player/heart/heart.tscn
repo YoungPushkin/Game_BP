@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b5l1jo3ts3vyq"]
+
+[ext_resource type="Texture2D" uid="uid://cb4283d5dcwsx" path="res://assets/player/heart/heart pixel art 32x32.png" id="1_w21kj"]
+
+[node name="Panel" type="Panel" unique_id=183806475]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1918.0
+offset_top = 1.0
+offset_right = -1659.0
+offset_bottom = 66.0
+grow_horizontal = 0
+
+[node name="heart_1" type="Sprite2D" parent="." unique_id=239773883]
+position = Vector2(34, 32)
+scale = Vector2(1.875, 1.875)
+texture = ExtResource("1_w21kj")
+
+[node name="heart_2" type="Sprite2D" parent="." unique_id=122515374]
+position = Vector2(95.4375, 32.437504)
+scale = Vector2(1.847656, 1.847656)
+texture = ExtResource("1_w21kj")
+
+[node name="heart_3" type="Sprite2D" parent="." unique_id=1930957924]
+position = Vector2(159.4375, 31.437492)
+scale = Vector2(1.9101563, 1.9101563)
+texture = ExtResource("1_w21kj")
+
+[node name="heart_4" type="Sprite2D" parent="." unique_id=439745037]
+position = Vector2(222.99998, 33)
+scale = Vector2(1.8749996, 1.8749996)
+texture = ExtResource("1_w21kj")

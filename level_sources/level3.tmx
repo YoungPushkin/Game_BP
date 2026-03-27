@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="36" height="24" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="32">
+ <properties>
+  <property name="schema_version" type="int" value="4"/>
+  <property name="source_editor" value="tiled"/>
+ </properties>
+ <tileset firstgid="1" source="World.tsx"/>
+ <tileset firstgid="65" name="ladder" tilewidth="32" tileheight="32" tilecount="216" columns="24">
+  <image source="../assets/tilesets/material.png" width="799" height="288"/>
+ </tileset>
+ <tileset firstgid="281" name="saw" tilewidth="32" tileheight="32" tilecount="6" columns="6">
+  <image source="../assets/props/Saw.png" width="192" height="32"/>
+ </tileset>
+ <tileset firstgid="287" name="premodels" tilewidth="32" tileheight="32" tilecount="8" columns="8">
+  <image source="../assets/props/Chest.png" width="256" height="32"/>
+ </tileset>
+ <tileset firstgid="295" name="hammer" tilewidth="32" tileheight="32" tilecount="16" columns="8">
+  <image source="../assets/props/Hammer.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="311" name="door" tilewidth="32" tileheight="64" tilecount="8" columns="8">
+  <image source="../assets/props/Entry.png" width="256" height="64"/>
+ </tileset>
+ <tileset firstgid="319" name="terminal" tilewidth="32" tileheight="42" tilecount="4" columns="4">
+  <image source="../assets/props/Screen2.png" width="128" height="42"/>
+ </tileset>
+ <tileset firstgid="323" name="woolf" tilewidth="48" tileheight="48" tilecount="4" columns="4">
+  <image source="../assets/enemies/woolf/Idle.png" width="192" height="48"/>
+ </tileset>
+ <tileset firstgid="327" name="sky" tilewidth="48" tileheight="48" tilecount="4" columns="4">
+  <image source="../assets/enemies/sky/Idle.png" width="192" height="48"/>
+ </tileset>
+ <tileset firstgid="331" name="robot" tilewidth="48" tileheight="48" tilecount="4" columns="4">
+  <image source="../assets/enemies/robot/Idle.png" width="192" height="48"/>
+ </tileset>
+ <tileset firstgid="335" name="player" tilewidth="48" tileheight="48" tilecount="4" columns="4">
+  <image source="../assets/player/1 Characters/1 Biker/Idle1.png" width="192" height="48"/>
+ </tileset>
+ <tileset firstgid="339" name="closet" tilewidth="32" tileheight="32" tilecount="1" columns="1">
+  <image source="../assets/tilesets/closet.png" width="32" height="36"/>
+ </tileset>
+ <layer id="1" name="world" width="36" height="24" locked="1">
+  <properties>
+   <property name="collision_profile" value="none"/>
+   <property name="usage" value="visual_tiles"/>
+  </properties>
+  <data encoding="csv">
+33,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,35,
+41,46,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,47,43,
+41,43,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,3221225524,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,90,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,44,0,37,38,38,38,38,38,38,38,38,38,38,39,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,33,35,0,37,38,39,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,33,34,34,34,55,43,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,33,55,42,42,42,42,43,0,0,0,0,44,37,38,39,0,0,0,45,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,96,33,55,42,42,42,42,42,43,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,37,38,38,39,41,43,
+41,43,0,37,38,38,38,50,47,42,42,42,42,42,43,37,38,39,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,41,46,50,50,47,46,51,0,0,0,0,52,0,0,0,0,0,0,37,39,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,41,43,0,0,41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,49,51,0,0,41,43,92,0,0,0,0,0,0,96,33,34,35,0,0,0,0,0,0,0,0,90,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,49,51,37,38,38,38,38,38,38,38,55,53,54,34,38,38,38,38,38,38,38,39,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,47,43,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,0,0,0,0,0,0,0,0,41,43,
+41,54,34,34,34,34,34,34,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,0,0,0,0,0,0,0,0,41,43,
+41,42,42,42,42,42,42,42,42,42,43,0,0,0,0,0,0,0,0,0,0,0,0,0,49,51,0,0,0,0,0,0,0,0,41,43,
+49,50,50,50,50,50,50,50,50,50,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,51,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,
+33,34,34,34,34,34,34,34,34,34,34,34,34,35,0,0,0,0,33,34,55,42,54,34,34,34,34,34,34,34,34,34,34,34,34,35,
+41,42,42,42,42,42,42,42,42,42,42,42,42,54,34,34,34,34,55,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,43,
+49,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,51
+</data>
+ </layer>
+ <layer id="15" name="world_collision" width="36" height="24" visible="0" locked="1">
+  <properties>
+   <property name="collision_profile" value="world_solid"/>
+   <property name="usage" value="solid_tiles"/>
+  </properties>
+  <data encoding="csv">
+33,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,35,
+41,46,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,47,43,
+41,43,1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,37,38,38,38,38,38,38,38,38,38,38,39,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,33,35,0,37,38,39,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,33,34,34,34,55,43,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,33,55,42,42,42,42,43,0,0,0,0,44,37,38,39,0,0,0,45,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,33,55,42,42,42,42,42,43,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,37,38,38,39,41,43,
+41,43,0,37,38,38,38,50,47,42,42,42,42,42,43,37,38,39,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,41,46,50,50,47,46,51,0,0,0,0,52,0,0,0,0,0,0,37,39,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,41,43,0,0,41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,49,51,0,0,41,43,0,0,0,0,0,0,0,0,33,34,35,0,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,49,51,37,38,38,38,38,38,38,38,55,53,54,34,38,38,38,38,38,38,38,39,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,47,43,0,0,0,0,0,0,0,0,41,43,
+41,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,0,0,0,0,0,0,0,0,41,43,
+41,54,34,34,34,34,34,34,34,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,41,43,0,0,0,0,0,0,0,0,41,43,
+41,42,42,42,42,42,42,42,42,42,43,0,0,0,0,0,0,0,0,0,0,0,0,0,49,51,0,0,0,0,0,0,0,0,41,43,
+49,50,50,50,50,50,50,50,50,50,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,51,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,34,35,0,0,0,0,0,0,0,0,0,0,0,0,0,
+33,34,34,34,34,34,34,34,34,34,34,34,34,35,0,0,0,0,33,34,55,42,54,34,34,34,34,34,34,34,34,34,34,34,34,35,
+41,42,42,42,42,42,42,42,42,42,42,42,42,54,34,34,34,34,55,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,42,43,
+49,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,51
+</data>
+ </layer>
+ <layer id="16" name="world_decor" width="36" height="24" locked="1">
+  <properties>
+   <property name="collision_profile" value="none"/>
+   <property name="usage" value="decor_tiles"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225524,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,0,96,0,0,0,0,0,0,0,0,0,0,0,90,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="ladder" width="36" height="24" locked="1">
+  <properties>
+   <property name="activation_group" value="ladder"/>
+   <property name="collision_profile" value="ladder_area"/>
+   <property name="player_group_required" value="player"/>
+   <property name="usage" value="ladder_tiles"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,186,0,0,0,0,0,0,0,0,0,0,0,0,186,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,186,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,192,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,1073742010,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,
+0,0,186,0,0,0,0,0,0,0,0,0,0,0,0,1073742010,0,0,186,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1073742010,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1073742010,0,0,0,0,0,0,0,0,186,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,188,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1073742010,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="17" name="entities" locked="1">
+  <properties>
+   <property name="entity_layer" value="true"/>
+   <property name="position_mode" value="tile_object_center"/>
+   <property name="schema" value="entity_objects_v1"/>
+  </properties>
+  <object id="4" name="saw" gid="281" x="446.667" y="705" width="32" height="32">
+   <properties>
+    <property name="auto_detect_limits" type="bool" value="true"/>
+    <property name="collision_profile" value="trap"/>
+    <property name="damage" type="int" value="1"/>
+    <property name="detect_distance" type="float" value="1200"/>
+    <property name="edge_wait_time" type="float" value="0.12"/>
+    <property name="entity_type" value="saw"/>
+    <property name="frame_step_pixels" type="float" value="8"/>
+    <property name="hit_cooldown" type="float" value="0.4"/>
+    <property name="move_speed" type="float" value="80"/>
+    <property name="patrol_left_offset" type="float" value="-180"/>
+    <property name="patrol_right_offset" type="float" value="180"/>
+    <property name="ray_length" type="float" value="30"/>
+    <property name="run_anim" value="run"/>
+    <property name="spawn_kind" value="trap"/>
+    <property name="stop_anim" value="stop"/>
+    <property name="use_patrol_limits" type="bool" value="false"/>
+    <property name="wall_collision_mask" type="int" value="1"/>
+    <property name="wall_margin" type="float" value="0"/>
+   </properties>
+  </object>
+  <object id="10" name="premodules" gid="294" x="992.667" y="672.667" width="32" height="32">
+   <properties>
+    <property name="entity_type" value="module_pickup"/>
+    <property name="feeds_group" value="premodules"/>
+    <property name="inventory_add_count" type="int" value="1"/>
+    <property name="module_type" value="power_module"/>
+    <property name="spawn_kind" value="pickup"/>
+   </properties>
+  </object>
+  <object id="11" name="premodules" gid="294" x="926.667" y="672.333" width="32" height="32">
+   <properties>
+    <property name="entity_type" value="module_pickup"/>
+    <property name="feeds_group" value="premodules"/>
+    <property name="inventory_add_count" type="int" value="1"/>
+    <property name="module_type" value="power_module"/>
+    <property name="spawn_kind" value="pickup"/>
+   </properties>
+  </object>
+  <object id="12" name="premodules" gid="294" x="864.667" y="672" width="32" height="32">
+   <properties>
+    <property name="entity_type" value="module_pickup"/>
+    <property name="feeds_group" value="premodules"/>
+    <property name="inventory_add_count" type="int" value="1"/>
+    <property name="module_type" value="power_module"/>
+    <property name="spawn_kind" value="pickup"/>
+   </properties>
+  </object>
+  <object id="13" name="hammer" gid="295" x="320" y="639" width="32" height="32">
+   <properties>
+    <property name="active_frame_from" type="int" value="0"/>
+    <property name="active_frame_to" type="int" value="7"/>
+    <property name="anim_name" value="hammer"/>
+    <property name="collision_profile" value="trap"/>
+    <property name="cycle_speed" type="float" value="1"/>
+    <property name="damage" type="int" value="9999"/>
+    <property name="entity_type" value="hammer_trap"/>
+    <property name="frame_y_offsets" value="[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"/>
+    <property name="frame_y_scales" value="[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"/>
+    <property name="hit_cooldown" type="float" value="0.4"/>
+    <property name="spawn_kind" value="trap"/>
+    <property name="start_phase" type="float" value="0"/>
+   </properties>
+  </object>
+  <object id="15" name="hammer" gid="295" x="237" y="640" width="32" height="32">
+   <properties>
+    <property name="active_frame_from" type="int" value="0"/>
+    <property name="active_frame_to" type="int" value="7"/>
+    <property name="anim_name" value="hammer"/>
+    <property name="collision_profile" value="trap"/>
+    <property name="cycle_speed" type="float" value="1"/>
+    <property name="damage" type="int" value="9999"/>
+    <property name="entity_type" value="hammer_trap"/>
+    <property name="frame_y_offsets" value="[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"/>
+    <property name="frame_y_scales" value="[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"/>
+    <property name="hit_cooldown" type="float" value="0.4"/>
+    <property name="spawn_kind" value="trap"/>
+    <property name="start_phase" type="float" value="0"/>
+   </properties>
+  </object>
+  <object id="16" name="hammer" gid="295" x="154" y="640" width="32" height="32">
+   <properties>
+    <property name="active_frame_from" type="int" value="0"/>
+    <property name="active_frame_to" type="int" value="7"/>
+    <property name="anim_name" value="hammer"/>
+    <property name="collision_profile" value="trap"/>
+    <property name="cycle_speed" type="float" value="1"/>
+    <property name="damage" type="int" value="9999"/>
+    <property name="entity_type" value="hammer_trap"/>
+    <property name="frame_y_offsets" value="[0.0,4.0,10.0,18.0,28.0,22.0,12.0,4.0]"/>
+    <property name="frame_y_scales" value="[1.0,1.1,1.25,1.45,1.7,1.45,1.2,1.05]"/>
+    <property name="hit_cooldown" type="float" value="0.4"/>
+    <property name="spawn_kind" value="trap"/>
+    <property name="start_phase" type="float" value="0"/>
+   </properties>
+  </object>
+  <object id="7" name="modul" gid="236" x="864.333" y="95.6667" width="32" height="32">
+   <properties>
+    <property name="activates_group" value="moduletable_active"/>
+    <property name="animation_start_delay" type="float" value="0.5"/>
+    <property name="consumes_inventory_module" type="bool" value="true"/>
+    <property name="entity_type" value="module_table"/>
+    <property name="feeds_terminal_group" value="terminal"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+  <object id="8" name="modul" gid="236" x="1055.33" y="386.667" width="32" height="32">
+   <properties>
+    <property name="activates_group" value="moduletable_active"/>
+    <property name="animation_start_delay" type="float" value="0.5"/>
+    <property name="consumes_inventory_module" type="bool" value="true"/>
+    <property name="entity_type" value="module_table"/>
+    <property name="feeds_terminal_group" value="terminal"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+  <object id="9" name="modul" gid="236" x="576" y="127.667" width="32" height="32">
+   <properties>
+    <property name="activates_group" value="moduletable_active"/>
+    <property name="animation_start_delay" type="float" value="0.5"/>
+    <property name="consumes_inventory_module" type="bool" value="true"/>
+    <property name="entity_type" value="module_table"/>
+    <property name="feeds_terminal_group" value="terminal"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+  <object id="18" name="door_left" gid="311" x="17.5" y="672" width="32" height="64">
+   <properties>
+    <property name="checkpoint_offset" value="48,0"/>
+    <property name="collision_profile" value="door"/>
+    <property name="door_id" value="door_left"/>
+    <property name="entity_type" value="door"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+  <object id="19" name="door_right" gid="311" x="1097" y="673.5" width="32" height="64">
+   <properties>
+    <property name="checkpoint_offset" value="48,0"/>
+    <property name="collision_profile" value="door"/>
+    <property name="door_id" value="door_right"/>
+    <property name="entity_type" value="door"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+  <object id="20" name="terminal_main" gid="319" x="1060.5" y="672" width="32" height="42">
+   <properties>
+    <property name="activation_chain" value="modules-&gt;premodules-&gt;terminal"/>
+    <property name="activation_source_group" value="premodules"/>
+    <property name="entity_type" value="terminal"/>
+    <property name="required_active_moduletables" type="int" value="3"/>
+    <property name="spawn_kind" value="interactive"/>
+    <property name="target_door_id" value="door_right"/>
+    <property name="terminal_id" value="terminal_main"/>
+   </properties>
+  </object>
+  <object id="28" name="robot" gid="331" x="765.667" y="671.333" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_diameter" type="float" value="520"/>
+    <property name="edge_check_down" type="float" value="70"/>
+    <property name="edge_check_forward" type="float" value="30"/>
+    <property name="entity_type" value="robot"/>
+    <property name="flip_visual_by_dir" type="bool" value="true"/>
+    <property name="floor_flat_tolerance" type="float" value="8"/>
+    <property name="floor_mask" type="int" value="1"/>
+    <property name="gravity_scale" type="float" value="1"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="340"/>
+    <property name="lose_sight_delay" type="float" value="0.2"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="max_step_down" type="float" value="6"/>
+    <property name="mid_probe_ratio" type="float" value="0.5"/>
+    <property name="near_probe_forward" type="float" value="3"/>
+    <property name="queue_free_on_death_end" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.2"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="start_direction" type="int" value="1"/>
+    <property name="trap_mask" type="int" value="8"/>
+    <property name="turn_cooldown" type="float" value="0.12"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="walk_anim" value="walk"/>
+    <property name="walk_speed" type="float" value="70"/>
+    <property name="wall_check_forward" type="float" value="24"/>
+    <property name="xp_reward" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="29" name="robot" gid="331" x="916.667" y="415.667" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_diameter" type="float" value="520"/>
+    <property name="edge_check_down" type="float" value="70"/>
+    <property name="edge_check_forward" type="float" value="30"/>
+    <property name="entity_type" value="robot"/>
+    <property name="flip_visual_by_dir" type="bool" value="true"/>
+    <property name="floor_flat_tolerance" type="float" value="8"/>
+    <property name="floor_mask" type="int" value="1"/>
+    <property name="gravity_scale" type="float" value="1"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="340"/>
+    <property name="lose_sight_delay" type="float" value="0.2"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="max_step_down" type="float" value="6"/>
+    <property name="mid_probe_ratio" type="float" value="0.5"/>
+    <property name="near_probe_forward" type="float" value="3"/>
+    <property name="queue_free_on_death_end" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.2"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="start_direction" type="int" value="1"/>
+    <property name="trap_mask" type="int" value="8"/>
+    <property name="turn_cooldown" type="float" value="0.12"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="walk_anim" value="walk"/>
+    <property name="walk_speed" type="float" value="70"/>
+    <property name="wall_check_forward" type="float" value="24"/>
+    <property name="xp_reward" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="22" name="sky" gid="327" x="832.333" y="497" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="attack_block_mask" type="int" value="1"/>
+    <property name="attack_contact_extra_range" type="float" value="4"/>
+    <property name="attack_cooldown" type="float" value="0.35"/>
+    <property name="attack_max_duration" type="float" value="1"/>
+    <property name="attack_path_end_padding" type="float" value="6"/>
+    <property name="attack_path_side_probe" type="float" value="8"/>
+    <property name="attack_speed" type="float" value="220"/>
+    <property name="attack_vertical_tolerance" type="float" value="22"/>
+    <property name="bullet_group" value="player_bullet"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="contact_damage" type="int" value="1"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_radius" type="float" value="220"/>
+    <property name="detect_vertical_tolerance" type="float" value="220"/>
+    <property name="die_on_any_dash_collision" type="bool" value="true"/>
+    <property name="die_on_player_hit" type="bool" value="true"/>
+    <property name="dodge_axis" type="int" value="0"/>
+    <property name="dodge_check_radius" type="float" value="180"/>
+    <property name="dodge_cooldown" type="float" value="0.35"/>
+    <property name="dodge_duration" type="float" value="0.18"/>
+    <property name="dodge_speed" type="float" value="170"/>
+    <property name="enable_bullet_dodge" type="bool" value="true"/>
+    <property name="entity_type" value="sky"/>
+    <property name="flip_by_velocity_x" type="bool" value="true"/>
+    <property name="hurt_anim" value="hurt"/>
+    <property name="hurt_duration" type="float" value="0.16"/>
+    <property name="idle_anim" value="idle"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="320"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="move_anim" value="fly"/>
+    <property name="queue_free_after_death" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.15"/>
+    <property name="retreat_duration" type="float" value="0.3"/>
+    <property name="retreat_speed" type="float" value="150"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="use_line_of_sight" type="bool" value="true"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="xp_reward" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="23" name="sky" gid="2147483975" x="1041" y="494.667" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="attack_block_mask" type="int" value="1"/>
+    <property name="attack_contact_extra_range" type="float" value="4"/>
+    <property name="attack_cooldown" type="float" value="0.35"/>
+    <property name="attack_max_duration" type="float" value="1"/>
+    <property name="attack_path_end_padding" type="float" value="6"/>
+    <property name="attack_path_side_probe" type="float" value="8"/>
+    <property name="attack_speed" type="float" value="220"/>
+    <property name="attack_vertical_tolerance" type="float" value="22"/>
+    <property name="bullet_group" value="player_bullet"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="contact_damage" type="int" value="1"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_radius" type="float" value="220"/>
+    <property name="detect_vertical_tolerance" type="float" value="220"/>
+    <property name="die_on_any_dash_collision" type="bool" value="true"/>
+    <property name="die_on_player_hit" type="bool" value="true"/>
+    <property name="dodge_axis" type="int" value="0"/>
+    <property name="dodge_check_radius" type="float" value="180"/>
+    <property name="dodge_cooldown" type="float" value="0.35"/>
+    <property name="dodge_duration" type="float" value="0.18"/>
+    <property name="dodge_speed" type="float" value="170"/>
+    <property name="enable_bullet_dodge" type="bool" value="true"/>
+    <property name="entity_type" value="sky"/>
+    <property name="flip_by_velocity_x" type="bool" value="true"/>
+    <property name="hurt_anim" value="hurt"/>
+    <property name="hurt_duration" type="float" value="0.16"/>
+    <property name="idle_anim" value="idle"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="320"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="move_anim" value="fly"/>
+    <property name="queue_free_after_death" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.15"/>
+    <property name="retreat_duration" type="float" value="0.3"/>
+    <property name="retreat_speed" type="float" value="150"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="use_line_of_sight" type="bool" value="true"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="xp_reward" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="24" name="sky" gid="2147483975" x="813" y="109" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="attack_block_mask" type="int" value="1"/>
+    <property name="attack_contact_extra_range" type="float" value="4"/>
+    <property name="attack_cooldown" type="float" value="0.35"/>
+    <property name="attack_max_duration" type="float" value="1"/>
+    <property name="attack_path_end_padding" type="float" value="6"/>
+    <property name="attack_path_side_probe" type="float" value="8"/>
+    <property name="attack_speed" type="float" value="220"/>
+    <property name="attack_vertical_tolerance" type="float" value="22"/>
+    <property name="bullet_group" value="player_bullet"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="contact_damage" type="int" value="1"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_radius" type="float" value="220"/>
+    <property name="detect_vertical_tolerance" type="float" value="220"/>
+    <property name="die_on_any_dash_collision" type="bool" value="true"/>
+    <property name="die_on_player_hit" type="bool" value="true"/>
+    <property name="dodge_axis" type="int" value="0"/>
+    <property name="dodge_check_radius" type="float" value="180"/>
+    <property name="dodge_cooldown" type="float" value="0.35"/>
+    <property name="dodge_duration" type="float" value="0.18"/>
+    <property name="dodge_speed" type="float" value="170"/>
+    <property name="enable_bullet_dodge" type="bool" value="true"/>
+    <property name="entity_type" value="sky"/>
+    <property name="flip_by_velocity_x" type="bool" value="true"/>
+    <property name="hurt_anim" value="hurt"/>
+    <property name="hurt_duration" type="float" value="0.16"/>
+    <property name="idle_anim" value="idle"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="320"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="move_anim" value="fly"/>
+    <property name="queue_free_after_death" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.15"/>
+    <property name="retreat_duration" type="float" value="0.3"/>
+    <property name="retreat_speed" type="float" value="150"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="use_line_of_sight" type="bool" value="true"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="xp_reward" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="25" name="sky" gid="327" x="64.3333" y="144.333" width="48" height="48">
+   <properties>
+    <property name="attack_anim" value="attack"/>
+    <property name="attack_block_mask" type="int" value="1"/>
+    <property name="attack_contact_extra_range" type="float" value="4"/>
+    <property name="attack_cooldown" type="float" value="0.35"/>
+    <property name="attack_max_duration" type="float" value="1"/>
+    <property name="attack_path_end_padding" type="float" value="6"/>
+    <property name="attack_path_side_probe" type="float" value="8"/>
+    <property name="attack_speed" type="float" value="220"/>
+    <property name="attack_vertical_tolerance" type="float" value="22"/>
+    <property name="bullet_group" value="player_bullet"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="contact_damage" type="int" value="1"/>
+    <property name="death_anim" value="death"/>
+    <property name="detect_radius" type="float" value="220"/>
+    <property name="detect_vertical_tolerance" type="float" value="220"/>
+    <property name="die_on_any_dash_collision" type="bool" value="true"/>
+    <property name="die_on_player_hit" type="bool" value="true"/>
+    <property name="dodge_axis" type="int" value="0"/>
+    <property name="dodge_check_radius" type="float" value="180"/>
+    <property name="dodge_cooldown" type="float" value="0.35"/>
+    <property name="dodge_duration" type="float" value="0.18"/>
+    <property name="dodge_speed" type="float" value="170"/>
+    <property name="enable_bullet_dodge" type="bool" value="true"/>
+    <property name="entity_type" value="sky"/>
+    <property name="flip_by_velocity_x" type="bool" value="true"/>
+    <property name="hurt_anim" value="hurt"/>
+    <property name="hurt_duration" type="float" value="0.16"/>
+    <property name="idle_anim" value="idle"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="320"/>
+    <property name="max_health" type="int" value="3"/>
+    <property name="move_anim" value="fly"/>
+    <property name="queue_free_after_death" type="bool" value="true"/>
+    <property name="refresh_target_interval" type="float" value="0.15"/>
+    <property name="retreat_duration" type="float" value="0.3"/>
+    <property name="retreat_speed" type="float" value="150"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="use_line_of_sight" type="bool" value="true"/>
+    <property name="vision_block_mask" type="int" value="1"/>
+    <property name="xp_reward" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="21" name="woolf" gid="323" x="122" y="514" width="48" height="48">
+   <properties>
+    <property name="attack_anim_fps" type="float" value="10"/>
+    <property name="attack_cooldown" type="float" value="0.35"/>
+    <property name="attack_damage" type="int" value="1"/>
+    <property name="attack_hit_frame" type="int" value="1"/>
+    <property name="attack_range" type="float" value="12"/>
+    <property name="attack_vertical_tolerance" type="float" value="44"/>
+    <property name="avoid_fall" type="bool" value="true"/>
+    <property name="back_push_cooldown" type="float" value="0.25"/>
+    <property name="back_push_force_x" type="float" value="220"/>
+    <property name="back_push_range" type="float" value="8"/>
+    <property name="back_push_separation_x" type="float" value="2"/>
+    <property name="blocked_wait_time" type="float" value="0.55"/>
+    <property name="chase_stop_distance" type="float" value="14"/>
+    <property name="cliff_check_depth" type="float" value="72"/>
+    <property name="cliff_check_distance" type="float" value="36"/>
+    <property name="collision_layer" type="int" value="4"/>
+    <property name="collision_mask" type="int" value="3"/>
+    <property name="collision_profile" value="enemy"/>
+    <property name="death_fallback_time" type="float" value="0.7"/>
+    <property name="detect_radius" type="float" value="360"/>
+    <property name="enable_back_push" type="bool" value="true"/>
+    <property name="end_attack_on_hit_frame" type="bool" value="true"/>
+    <property name="entity_type" value="woolf"/>
+    <property name="gravity" type="float" value="900"/>
+    <property name="hurt_duration" type="float" value="0.2"/>
+    <property name="hurt_reaction_cooldown" type="float" value="0.2"/>
+    <property name="is_boss" type="bool" value="false"/>
+    <property name="lose_radius" type="float" value="520"/>
+    <property name="lose_target_if_airborne" type="bool" value="true"/>
+    <property name="max_health" type="int" value="6"/>
+    <property name="run_speed" type="float" value="180"/>
+    <property name="scan_turn_interval" type="float" value="1.2"/>
+    <property name="search_anchor_slack" type="float" value="4"/>
+    <property name="search_duration" type="float" value="2.2"/>
+    <property name="search_turn_interval" type="float" value="0.55"/>
+    <property name="spawn_kind" value="enemy"/>
+    <property name="stop_on_damage_hit" type="bool" value="false"/>
+    <property name="target_refresh_interval" type="float" value="0.2"/>
+    <property name="trap_check_distance" type="float" value="42"/>
+    <property name="trap_check_radius" type="float" value="14"/>
+    <property name="trap_collision_mask" type="int" value="8"/>
+    <property name="use_damage_area_as_attack_radius" type="bool" value="true"/>
+    <property name="vision_angle_deg" type="float" value="100"/>
+    <property name="vision_height_tolerance" type="float" value="120"/>
+    <property name="wall_check_distance" type="float" value="26"/>
+    <property name="wall_collision_mask" type="int" value="1"/>
+    <property name="xp_reward" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="30" name="player_spawn_main" gid="335" x="69" y="672" width="48" height="48">
+   <properties>
+    <property name="abyss_fallback_y" type="float" value="1200"/>
+    <property name="abyss_margin" type="float" value="160"/>
+    <property name="auto_flip_visual_compensation" type="bool" value="true"/>
+    <property name="bullet_scene" value="res://scenes/player/player_bullet.tscn"/>
+    <property name="collision_layer" type="int" value="2"/>
+    <property name="collision_mask" type="int" value="13"/>
+    <property name="collision_profile" value="player"/>
+    <property name="death_anim_time" type="float" value="0.6"/>
+    <property name="entity_type" value="player_spawn"/>
+    <property name="hurt_anim_time" type="float" value="0.25"/>
+    <property name="jump_velocity" type="float" value="-350"/>
+    <property name="knockback_duration" type="float" value="0.12"/>
+    <property name="knockback_force_x" type="float" value="220"/>
+    <property name="knockback_force_y" type="float" value="-170"/>
+    <property name="ladder_speed" type="float" value="120"/>
+    <property name="max_health" type="int" value="4"/>
+    <property name="run_speed" type="float" value="230"/>
+    <property name="shoot_cooldown" type="float" value="0.14"/>
+    <property name="spawn_id" value="spawn_main"/>
+    <property name="spawn_kind" value="player_spawn"/>
+    <property name="walk_speed" type="float" value="140"/>
+   </properties>
+  </object>
+  <object id="31" name="  locker" gid="339" x="105" y="672" width="32" height="32">
+   <properties>
+    <property name="entity_type" value="locker"/>
+    <property name="spawn_kind" value="interactive"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

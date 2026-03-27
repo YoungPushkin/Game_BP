@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2jifuo114l38"]
+
+[ext_resource type="Texture2D" uid="uid://bd5q3ydt0dios" path="res://assets/player/5 Bullets/9.png" id="1_16ead"]
+[ext_resource type="Script" uid="uid://cabqu0gngbpif" path="res://scripts/enemies/bullet_robot.gd" id="1_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_16ead"]
+radius = 5.5226803
+
+[node name="bullet_robot" type="Node2D" unique_id=1293316513]
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=232028971]
+position = Vector2(3, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("1_16ead")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1511362368]
+position = Vector2(3.0000002, 1.499999)
+shape = SubResource("CircleShape2D_16ead")

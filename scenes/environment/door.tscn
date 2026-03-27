@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://nqpmr88dindm"]
+
+[ext_resource type="Texture2D" uid="uid://dhcm8ju5k4ap2" path="res://assets/props/Entry.png" id="1_ba8gm"]
+[ext_resource type="Script" uid="uid://majxd3lcsfr3" path="res://scripts/environment/door.gd" id="2_ylqdw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6xrn"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0phs7"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50cdl"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5njw"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xadh"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24eas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6xrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0phs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50cdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5njw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xadh")
+}],
+"loop": true,
+"name": &"door",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba8gm"]
+size = Vector2(30, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trigger"]
+size = Vector2(56, 80)
+
+[node name="door" type="StaticBody2D" unique_id=1752906081]
+script = ExtResource("2_ylqdw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1081622319]
+sprite_frames = SubResource("SpriteFrames_24eas")
+animation = &"door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1691635462]
+shape = SubResource("RectangleShape2D_ba8gm")
+
+[node name="PassageArea" type="Area2D" parent="." unique_id=1500097866]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PassageArea" unique_id=1914253781]
+shape = SubResource("RectangleShape2D_trigger")

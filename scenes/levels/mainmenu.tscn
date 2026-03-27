@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cfmbnb4i1p444"]
+
+[ext_resource type="Texture2D" uid="uid://chq4mll8cpqqp" path="res://assets/tilesets/menu/fundament.png" id="1_i5bdk"]
+[ext_resource type="Texture2D" uid="uid://dubvwfcwtsbhm" path="res://assets/tilesets/menu/emblema.png" id="2_kx24e"]
+[ext_resource type="Texture2D" uid="uid://d0oqa5nnvarqq" path="res://assets/tilesets/menu/fon.png" id="2_lcxfl"]
+[ext_resource type="Texture2D" uid="uid://cmjgah0nd6qk6" path="res://assets/tilesets/menu/start.png" id="3_kx24e"]
+[ext_resource type="Texture2D" uid="uid://bd16bckc411nh" path="res://assets/tilesets/menu/levels.png" id="4_6yh2j"]
+[ext_resource type="Texture2D" uid="uid://cbpldx6dckjyw" path="res://assets/tilesets/menu/exit.png" id="5_vkx2j"]
+[ext_resource type="Texture2D" uid="uid://7w6mrcxyim7l" path="res://assets/tilesets/menu/godot.png" id="6_ybr10"]
+[ext_resource type="Texture2D" uid="uid://bws2hyx0v2ysu" path="res://assets/tilesets/menu/ldtk.png" id="7_12qgc"]
+[ext_resource type="Texture2D" uid="uid://bq0wo8t0g6nva" path="res://assets/tilesets/menu/tiled.png" id="8_v16a6"]
+[ext_resource type="Texture2D" uid="uid://bbjbyewevk7yv" path="res://assets/tilesets/menu/back.png" id="9_12qgc"]
+[ext_resource type="Script" uid="uid://d3kj137jxm44f" path="res://scripts/levels/mainmenu.gd" id="10_jqjs5"]
+
+[node name="mainmenu" type="CanvasLayer" unique_id=1142722101]
+script = ExtResource("10_jqjs5")
+
+[node name="fon" type="Sprite2D" parent="." unique_id=1268464199]
+position = Vector2(961.0001, 523)
+scale = Vector2(1.4345703, 1.4345703)
+texture = ExtResource("2_lcxfl")
+
+[node name="fundament" type="Sprite2D" parent="." unique_id=1887897750]
+position = Vector2(971.99994, 561)
+scale = Vector2(0.77441406, 0.77441406)
+texture = ExtResource("1_i5bdk")
+
+[node name="emblema" type="Sprite2D" parent="fundament" unique_id=808800072]
+position = Vector2(8.999998, -352)
+scale = Vector2(0.6640625, 0.6640625)
+texture = ExtResource("2_kx24e")
+
+[node name="main1" type="Node2D" parent="fundament" unique_id=808398998]
+visible = false
+
+[node name="start" type="Sprite2D" parent="fundament/main1" unique_id=1405960179]
+position = Vector2(-14, -131)
+scale = Vector2(0.41210938, 0.41210938)
+texture = ExtResource("3_kx24e")
+
+[node name="start" type="TextureButton" parent="fundament/main1/start" unique_id=2083631807]
+anchors_preset = -1
+anchor_left = 0.50600004
+anchor_top = 0.44900003
+anchor_right = 0.50600004
+anchor_bottom = 0.44900003
+offset_left = -1209.1403
+offset_top = -598.0888
+offset_right = -325.87952
+offset_bottom = -425.80444
+
+[node name="levels" type="Sprite2D" parent="fundament/main1" unique_id=1809828865]
+position = Vector2(-9.000014, -17.999985)
+scale = Vector2(0.4141631, 0.397093)
+texture = ExtResource("4_6yh2j")
+
+[node name="levels" type="TextureButton" parent="fundament/main1/levels" unique_id=898049275]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.48200002
+anchor_right = 0.5
+anchor_bottom = 0.48200002
+offset_left = -917.2136
+offset_top = -191.77061
+offset_right = -15.223999
+offset_bottom = -23.044373
+
+[node name="exit" type="Sprite2D" parent="fundament/main1" unique_id=408595236]
+position = Vector2(-9.000008, 149)
+scale = Vector2(0.41536456, 0.39355466)
+texture = ExtResource("5_vkx2j")
+
+[node name="exit" type="TextureButton" parent="fundament/main1/exit" unique_id=1334227912]
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.44300002
+anchor_right = 0.505
+anchor_bottom = 0.44300002
+offset_left = -1217.8041
+offset_top = -603.54767
+offset_right = -318.31018
+offset_bottom = -420.59976
+
+[node name="main2" type="Node2D" parent="fundament" unique_id=739278124]
+
+[node name="godot" type="Sprite2D" parent="fundament/main2" unique_id=1204310402]
+position = Vector2(106.68753, -136.90625)
+scale = Vector2(0.41778564, 0.41778564)
+texture = ExtResource("6_ybr10")
+
+[node name="TextureButton" type="TextureButton" parent="fundament/main2/godot" unique_id=954980839]
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.45000002
+anchor_right = 0.507
+anchor_bottom = 0.45000002
+offset_left = -1213.522
+offset_top = -599.85156
+offset_right = -323.11316
+offset_bottom = -425.12085
+metadata/_edit_use_anchors_ = true
+
+[node name="ldtk" type="Sprite2D" parent="fundament/main2" unique_id=563470514]
+position = Vector2(109.046906, -5.999998)
+scale = Vector2(0.40695348, 0.39123538)
+texture = ExtResource("7_12qgc")
+
+[node name="TextureButton" type="TextureButton" parent="fundament/main2/ldtk" unique_id=338470262]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.46300003
+anchor_right = 0.5
+anchor_bottom = 0.46300003
+offset_left = -1210.311
+offset_top = -589.1323
+offset_right = -310.94528
+offset_bottom = -434.11203
+metadata/_edit_use_anchors_ = true
+
+[node name="tiled" type="Sprite2D" parent="fundament/main2" unique_id=1462306185]
+position = Vector2(102.35568, 133.00378)
+scale = Vector2(0.4249423, 0.40524423)
+texture = ExtResource("8_v16a6")
+
+[node name="TextureButton" type="TextureButton" parent="fundament/main2/tiled" unique_id=688728519]
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.467
+anchor_right = 0.517
+anchor_bottom = 0.467
+offset_left = -1161.8721
+offset_top = -591.8991
+offset_right = -301.83612
+offset_bottom = -428.85037
+
+[node name="back" type="Sprite2D" parent="fundament/main2" unique_id=1971905473]
+position = Vector2(-255, -11.999954)
+scale = Vector2(0.13232423, 0.13232423)
+texture = ExtResource("9_12qgc")
+
+[node name="TextureButton" type="TextureButton" parent="fundament/main2/back" unique_id=1509675137]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45900002
+anchor_right = 0.5
+anchor_bottom = 0.45900002
+offset_left = -1092.9595
+offset_top = -817.64734
+offset_right = -443.04065
+offset_bottom = -205.51453
