@@ -15,7 +15,7 @@ Pri editore `LDtk` sa úroveň najskôr vytvára ako dátová štruktúra pozost
 
 Základný priebeh je znázornený na nasledujúcej schéme:
 
-![LDtk import workflow](word/shema%20git/ldtk1.drawio.png)
+![LDtk import workflow](shema%20git/ldtk1.png)
 
 Na začiatku vstupuje do procesu zdrojový súbor `level2.ldtk`. Ten sa importuje pomocou konfigurácie `level2.ldtk.import`, pričom súčasťou nastavenia sú aj post-import kroky, ktoré zabezpečujú ďalšie spracovanie úrovne. Importér `Amano LDtk Importer` vytvorí základnú scénu, ale na to, aby sa z nej stala plnohodnotná herná úroveň, je ešte potrebné spustiť projektové skripty `level2_entities.gd` a `level2_level.gd`.
 
@@ -27,7 +27,7 @@ Jedným z najdôležitejších krokov integrácie je spracovanie entít z `LDtk`
 
 Tento princíp zobrazuje nasledujúca schéma:
 
-![LDtk entity to scene mapping](word/shema%20git/Ldtk2.drawio.png)
+![LDtk entity to scene mapping](shema%20git/ldtk2.png)
 
 Skript `level2_entities.gd` prijíma entity vrstvu po importe cez `post_import(entity_layer)`. Následne podľa identifikátora entity vyhľadá v mape `entity_scene_path`, ktorá scéna projektu zodpovedá danej entite. Pomocou funkcie `_make_instance(identifier)` sa vytvorí konkrétny inštančný objekt a vloží sa do úrovne v `Godot`.
 
@@ -37,7 +37,7 @@ Tento krok je nevyhnutný preto, lebo bez neho by sa do hry preniesli iba samotn
 
 Po vytvorení inštancie scény je potrebné správne preniesť údaje z `LDtk` do konkrétnych objektov v hre. Túto časť ilustruje nasledujúca schéma:
 
-![LDtk fields and metadata](word/shema%20git/ldtk3.drawio.png)
+![LDtk fields and metadata](shema%20git/ldtk3.png)
 
 V `level2_entities.gd` sa po vytvorení objektu spracujú polia entity. Časť hodnôt sa zapisuje priamo ako vlastnosti objektu cez `instance.set()`, zatiaľ čo iné sa ukladajú ako metadata pomocou `instance.set_meta()`.
 
@@ -54,7 +54,7 @@ Po importe entít je ešte potrebné prepojiť objekty, ktoré v editore súvisi
 
 Túto časť vysvetľuje nasledujúca schéma:
 
-![LDtk terminal and door binding](word/shema%20git/ldtk4.drawio.png)
+![LDtk terminal and door binding](shema%20git/ldtk4.png)
 
 Skript `level2_level.gd` pri post-import spracovaní vyhľadá objekty dverí v úrovni a vytvorí internú mapu dostupných dverí. Terminál má v metadata uložený údaj `target_door_id`, na základe ktorého sa určí, ktoré dvere má ovládať. Následne sa terminálu priradí príslušná cesta `door_path`.
 
@@ -68,7 +68,7 @@ Osobitnú úlohu pri integrácii `LDtk` zohráva kolízna vrstva. V editore je k
 
 Postup spracovania tejto vrstvy ukazuje nasledujúca schéma:
 
-![LDtk world collision rebuild](word/shema%20git/ldtk5.drawio.png)
+![LDtk world collision rebuild](shema%20git/ldtk5.png)
 
 V `level2_level.gd` sa po importe najskôr podľa potreby deaktivujú vstavané kolízie dlaždicových vrstiev. Následne sa vyhľadá surová vrstva `Kollizia` a z jej údajov sa vytvorí jednotná svetová kolízna štruktúra. Funkcie ako `_rebuild_world_collision()`, `_find_raw_layer()`, `_add_world_collision_shapes()` a `_create_world_shape()` generujú finálny uzol `generated_world_collision`.
 
@@ -100,7 +100,7 @@ Pri editore `Tiled` bol postup odlišný. Import neprebiehal cez dátovo oriento
 
 Základnú logiku importu zobrazuje nasledujúca schéma:
 
-![Tiled import workflow](word/shema%20git/tiled1.drawio.png)
+![Tiled import workflow](shema%20git/tiled1.png)
 
 Mapa vytvorená v `Tiled` sa importuje cez `YATI importer`, ktorý vytvorí scénu so zachovanými hlavnými vrstvami, napríklad `World`, `World_Collision`, `World_decor`, `ladder` a `entities`. Výsledkom je úroveň v `Godot`, ktorá už má pripravenú základnú štruktúru. Súčasťou importu je aj uzol `generated_world_collision`, čo uľahčuje ďalšie spracovanie mapy v projekte.
 
@@ -112,7 +112,7 @@ Keďže import z `Tiled` neprenášal všetky logické väzby v podobe, ktorú p
 
 Túto časť zobrazuje nasledujúca schéma:
 
-![Tiled metadata adaptation](word/shema%20git/tiled2.drawio.png)
+![Tiled metadata adaptation](shema%20git/tiled2.png)
 
 Po importe cez `YATI` zostali viaceré údaje objektov dostupné najmä cez metadata values. To znamená, že skripty `moduletable.gd`, `terminal.gd` a `level_navigation.gd` museli byť doplnené tak, aby tieto hodnoty správne načítali a interpretovali.
 
@@ -131,7 +131,7 @@ Samostatný problém predstavovala mechanika lezenia po rebríku. V `Tiled` bola
 
 Tento princíp je zachytený na nasledujúcej schéme:
 
-![Tiled ladder integration](word/shema%20git/tiled3.drawio.png)
+![Tiled ladder integration](shema%20git/tiled3.png)
 
 Zo strany `Tiled` sa do úrovne prenášajú údaje o umiestnení rebríka. V samotnej scéne `Godot` sa však využíva objekt `ladder_area`, ktorý je prepojený so skriptom `ladder_area.gd`. Hráčsky skript `Player.gd` potom reaguje na vstup do tejto oblasti a aktivuje climbing behavior.
 
